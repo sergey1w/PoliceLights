@@ -11,6 +11,9 @@
 		A530D0AE2B89F62500E54E24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0AD2B89F62500E54E24 /* SceneDelegate.swift */; };
 		A530D0B52B89F62600E54E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530D0B42B89F62600E54E24 /* Assets.xcassets */; };
 		A530D0B82B89F62600E54E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A530D0B62B89F62600E54E24 /* LaunchScreen.storyboard */; };
+		A530D0C92B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0C82B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift */; };
+		A530D0CC2B8A153200E54E24 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CB2B8A153200E54E24 /* GradientButton.swift */; };
+		A530D0CE2B8A183C00E54E24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		A530D0B42B89F62600E54E24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A530D0B72B89F62600E54E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A530D0B92B89F62600E54E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A530D0C82B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+gradientLayer.swift"; sourceTree = "<group>"; };
+		A530D0CB2B8A153200E54E24 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,8 @@
 		A530D0AA2B89F62500E54E24 /* PoliceLights */ = {
 			isa = PBXGroup;
 			children = (
+				A530D0C82B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift */,
+				A530D0CA2B8A151900E54E24 /* CustomViews */,
 				A530D0C32B89FDF900E54E24 /* Home */,
 				A530D0BF2B89FDAA00E54E24 /* Application */,
 				A530D0C02B89FDBC00E54E24 /* Resources */,
@@ -105,8 +113,17 @@
 		A530D0C62B89FE0C00E54E24 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A530D0CA2B8A151900E54E24 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A530D0CB2B8A153200E54E24 /* GradientButton.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A530D0CE2B8A183C00E54E24 /* HomeViewController.swift in Sources */,
+				A530D0C92B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift in Sources */,
+				A530D0CC2B8A153200E54E24 /* GradientButton.swift in Sources */,
 				A530D0AC2B89F62500E54E24 /* AppDelegate.swift in Sources */,
 				A530D0AE2B89F62500E54E24 /* SceneDelegate.swift in Sources */,
 			);
@@ -326,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDX5GNKX3D;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PoliceLights/Info.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/PoliceLights/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -358,7 +378,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDX5GNKX3D;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PoliceLights/Info.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/PoliceLights/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
