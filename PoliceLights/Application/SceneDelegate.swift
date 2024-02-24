@@ -10,8 +10,9 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
+    private let backgroundLayer = BackgroundLayer()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -20,8 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.rootViewController = HomeViewController()
-        window.rootViewController?.view.backgroundColor = .Colors.darkBackground
+        window.layer.insertSublayer(backgroundLayer, at: 0)
+        backgroundLayer.frame = window.bounds
         window.makeKeyAndVisible()
+    }
+    
+    func windowScene(_ windowScene: UIWindowScene, didUpdate previousCoordinateSpace: UICoordinateSpace, interfaceOrientation previousInterfaceOrientation: UIInterfaceOrientation, traitCollection previousTraitCollection: UITraitCollection) {
+        backgroundLayer.setOrientation()
+        backgroundLayer.frame = window?.bounds ?? .zero
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

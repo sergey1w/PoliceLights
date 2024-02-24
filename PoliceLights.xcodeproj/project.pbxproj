@@ -14,6 +14,7 @@
 		A530D0C92B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0C82B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift */; };
 		A530D0CC2B8A153200E54E24 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CB2B8A153200E54E24 /* GradientButton.swift */; };
 		A530D0CE2B8A183C00E54E24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */; };
+		A530D0D02B8A66D400E54E24 /* BackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CF2B8A66D400E54E24 /* BackgroundLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A530D0C82B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+gradientLayer.swift"; sourceTree = "<group>"; };
 		A530D0CB2B8A153200E54E24 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A530D0CF2B8A66D400E54E24 /* BackgroundLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				A530D0CB2B8A153200E54E24 /* GradientButton.swift */,
+				A530D0CF2B8A66D400E54E24 /* BackgroundLayer.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A530D0CE2B8A183C00E54E24 /* HomeViewController.swift in Sources */,
+				A530D0D02B8A66D400E54E24 /* BackgroundLayer.swift in Sources */,
 				A530D0C92B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift in Sources */,
 				A530D0CC2B8A153200E54E24 /* GradientButton.swift in Sources */,
 				A530D0AC2B89F62500E54E24 /* AppDelegate.swift in Sources */,
