@@ -16,9 +16,20 @@ final class GradientButton: UIButton {
         setupUI()
     }
     
+    override var isHighlighted: Bool {
+        didSet {
+            guard oldValue != self.isHighlighted else { return }
+            UIView.animate(withDuration: 0.25, delay: 0, options: [
+                .beginFromCurrentState,
+                .allowUserInteraction
+            ]) {
+                self.alpha = self.isHighlighted ? 0.8 : 1
+            }
+        }
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradientLayer.cornerRadius = Constants.cornerRadius
         gradientLayer.frame = bounds
     }
     
@@ -26,10 +37,6 @@ final class GradientButton: UIButton {
         guard let title = title else { return }
         let attributedTitle = attributedString(title)
         setAttributedTitle(attributedTitle, for: state)
-    }
-    
-    private func setupUI() {
-        layer.insertSublayer(gradientLayer, at: 0)
     }
     
     private func attributedString(_ str: String) -> NSAttributedString {
@@ -43,6 +50,11 @@ final class GradientButton: UIButton {
         ]
         let attrStr = NSAttributedString(string: str, attributes: attributes)
         return attrStr
+    }
+    
+    private func setupUI() {
+        layer.insertSublayer(gradientLayer, at: 0)
+        gradientLayer.cornerRadius = Constants.cornerRadius
     }
     
     required init?(coder: NSCoder) {

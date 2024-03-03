@@ -13,18 +13,30 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(gradientButton)
-        
+        setupUI()
+    }
+    
+    
+    private func setupUI() {
         gradientButton.translatesAutoresizingMaskIntoConstraints = false
         
-        
+        view.addSubview(gradientButton)
+        gradientButton.snap(to: self.view.safeAreaLayoutGuide, [.centerX,.centerY])
         NSLayoutConstraint.activate([
-            gradientButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            gradientButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             gradientButton.widthAnchor.constraint(equalToConstant: 48),
             gradientButton.heightAnchor.constraint(equalToConstant: 48)
         ])
         
-        gradientButton.setTitle("OFF", for: .normal)
+        gradientButton.setTitle("go", for: .normal)
+        
+        gradientButton.addTarget(self, action: #selector(lego), for: .touchUpInside)
+    }
+    
+    
+    @objc private func lego() {
+        let vc = SirenViewController(frames: mockFrames)
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
     }
 }

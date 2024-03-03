@@ -24,7 +24,7 @@ final class BackgroundLayer: CALayer {
         let image = UIImage.background
         contents = image.cgImage
         contentsGravity = .resizeAspectFill
-        setOrientation()
+        transform = CATransform3DMakeRotation(0 / 180.0 * .pi, 0.0, 0.0, 1.0)
     }
     
     func setOrientation() {

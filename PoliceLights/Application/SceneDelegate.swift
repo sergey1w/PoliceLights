@@ -25,11 +25,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         backgroundLayer.frame = window.bounds
         window.makeKeyAndVisible()
     }
-    
-    func windowScene(_ windowScene: UIWindowScene, didUpdate previousCoordinateSpace: UICoordinateSpace, interfaceOrientation previousInterfaceOrientation: UIInterfaceOrientation, traitCollection previousTraitCollection: UITraitCollection) {
-        backgroundLayer.setOrientation()
-        backgroundLayer.frame = window?.bounds ?? .zero
-    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

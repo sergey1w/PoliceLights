@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A52B42FE2B9481BA00AA729A /* SirenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B42FD2B9481BA00AA729A /* SirenViewController.swift */; };
 		A530D0AC2B89F62500E54E24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0AB2B89F62500E54E24 /* AppDelegate.swift */; };
 		A530D0AE2B89F62500E54E24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0AD2B89F62500E54E24 /* SceneDelegate.swift */; };
 		A530D0B52B89F62600E54E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530D0B42B89F62600E54E24 /* Assets.xcassets */; };
@@ -15,9 +16,18 @@
 		A530D0CC2B8A153200E54E24 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CB2B8A153200E54E24 /* GradientButton.swift */; };
 		A530D0CE2B8A183C00E54E24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */; };
 		A530D0D02B8A66D400E54E24 /* BackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CF2B8A66D400E54E24 /* BackgroundLayer.swift */; };
+		A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */; };
+		A5DDE0712B948AA60042DA4B /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */; };
+		A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */; };
+		A5DDE0732B948AA60042DA4B /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06D2B948AA60042DA4B /* UIApplicationExtension.swift */; };
+		A5DDE0742B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06E2B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift */; };
+		A5DDE0752B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06F2B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift */; };
+		A5DDE0772B94B3FA0042DA4B /* SirenFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE0762B94B3FA0042DA4B /* SirenFrame.swift */; };
+		A5DDE0792B94B6860042DA4B /* SirenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE0782B94B6860042DA4B /* SirenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A52B42FD2B9481BA00AA729A /* SirenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenViewController.swift; sourceTree = "<group>"; };
 		A530D0A82B89F62500E54E24 /* PoliceLights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoliceLights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A530D0AB2B89F62500E54E24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A530D0AD2B89F62500E54E24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +38,14 @@
 		A530D0CB2B8A153200E54E24 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A530D0CF2B8A66D400E54E24 /* BackgroundLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLayer.swift; sourceTree = "<group>"; };
+		A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
+		A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+cornerRadius.swift"; sourceTree = "<group>"; };
+		A5DDE06D2B948AA60042DA4B /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		A5DDE06E2B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+addArrangedSubviews.swift"; sourceTree = "<group>"; };
+		A5DDE06F2B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+UIEdgeInsets.swift"; sourceTree = "<group>"; };
+		A5DDE0762B94B3FA0042DA4B /* SirenFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenFrame.swift; sourceTree = "<group>"; };
+		A5DDE0782B94B6860042DA4B /* SirenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +78,10 @@
 		A530D0AA2B89F62500E54E24 /* PoliceLights */ = {
 			isa = PBXGroup;
 			children = (
-				A530D0C82B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift */,
+				A5DDE0692B948A720042DA4B /* Extensions */,
+				A530D0BF2B89FDAA00E54E24 /* Application */,
 				A530D0CA2B8A151900E54E24 /* CustomViews */,
 				A530D0C32B89FDF900E54E24 /* Home */,
-				A530D0BF2B89FDAA00E54E24 /* Application */,
 				A530D0C02B89FDBC00E54E24 /* Resources */,
 			);
 			path = PoliceLights;
@@ -101,6 +119,7 @@
 		A530D0C42B89FE0700E54E24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A5DDE0762B94B3FA0042DA4B /* SirenFrame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */,
+				A52B42FD2B9481BA00AA729A /* SirenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,8 +145,23 @@
 			children = (
 				A530D0CB2B8A153200E54E24 /* GradientButton.swift */,
 				A530D0CF2B8A66D400E54E24 /* BackgroundLayer.swift */,
+				A530D0C82B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift */,
+				A5DDE0782B94B6860042DA4B /* SirenView.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		A5DDE0692B948A720042DA4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5DDE06F2B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift */,
+				A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */,
+				A5DDE06D2B948AA60042DA4B /* UIApplicationExtension.swift */,
+				A5DDE06E2B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift */,
+				A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */,
+				A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +237,18 @@
 				A530D0CE2B8A183C00E54E24 /* HomeViewController.swift in Sources */,
 				A530D0D02B8A66D400E54E24 /* BackgroundLayer.swift in Sources */,
 				A530D0C92B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift in Sources */,
+				A5DDE0772B94B3FA0042DA4B /* SirenFrame.swift in Sources */,
+				A5DDE0712B948AA60042DA4B /* UIView+Constraints.swift in Sources */,
 				A530D0CC2B8A153200E54E24 /* GradientButton.swift in Sources */,
 				A530D0AC2B89F62500E54E24 /* AppDelegate.swift in Sources */,
+				A5DDE0732B948AA60042DA4B /* UIApplicationExtension.swift in Sources */,
+				A5DDE0742B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift in Sources */,
+				A5DDE0752B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift in Sources */,
 				A530D0AE2B89F62500E54E24 /* SceneDelegate.swift in Sources */,
+				A52B42FE2B9481BA00AA729A /* SirenViewController.swift in Sources */,
+				A5DDE0792B94B6860042DA4B /* SirenView.swift in Sources */,
+				A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */,
+				A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +397,7 @@
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PoliceLights/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -385,8 +428,7 @@
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PoliceLights/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
