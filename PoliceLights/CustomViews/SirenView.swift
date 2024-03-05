@@ -9,12 +9,11 @@ import UIKit
 
 final class SirenView: UIView {
     
-    private(set) var model: SirenFrame
+    private(set) var model: SirenFrame = .empty
     private let sirenStackView = UIStackView()
     
-    init(model: SirenFrame) {
-        self.model = model
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupUI()
     }
     

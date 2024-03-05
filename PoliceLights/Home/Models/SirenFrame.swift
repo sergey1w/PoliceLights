@@ -13,9 +13,18 @@ struct SirenFrame {
     let sirenThree: Siren?
     let sirenFour: Siren?
     
+    init(sirenOne: Siren? = nil, sirenTwo: Siren? = nil, sirenThree: Siren? = nil, sirenFour: Siren? = nil) {
+        self.sirenOne = sirenOne
+        self.sirenTwo = sirenTwo
+        self.sirenThree = sirenThree
+        self.sirenFour = sirenFour
+    }
+    
     var sirens: [Siren?] {
         [sirenOne, sirenTwo, sirenThree, sirenFour]
     }
+    
+    static let empty = SirenFrame()
 }
 
 enum Siren: String {

@@ -9,14 +9,13 @@ import UIKit
 
 final class SirenViewController: UIViewController {
     
-    private let sirenView = SirenView(model: redBlue)
-    private let frames: [SirenFrame]
+    private let sirenView = SirenView(frame: .zero)
     private var frameIndex = 0
     private var timer: Timer? = nil
-    private let frequency: Double = 6 // Flashing frequency in Hz
+    private let model: SirenModel
     
-    init(frames: [SirenFrame]) {
-        self.frames = frames
+    init(model: SirenModel) {
+        self.model = model
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,7 +26,13 @@ final class SirenViewController: UIViewController {
     }
     
     func startFlashing() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0 / frequency, target: self, selector: #selector(displaySirenLights), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(
+            timeInterval: 1.0 / model.frequency,
+            target: self,
+            selector: #selector(displaySirenLights),
+            userInfo: nil,
+            repeats: true
+        )
         displaySirenLights()
     }
     
@@ -37,9 +42,9 @@ final class SirenViewController: UIViewController {
     
     @objc private func displaySirenLights() {
         UIView.animate(withDuration: 0) { [self] in
-            sirenView.setFrame(frame: frames[frameIndex])
+            sirenView.setFrame(frame: model.frames[frameIndex])
         } completion: { [self] _ in
-            frameIndex = (frameIndex + 1) % frames.count
+            frameIndex = (frameIndex + 1) % model.frames.count
         }
     }
     

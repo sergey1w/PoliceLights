@@ -16,6 +16,12 @@
 		A530D0CC2B8A153200E54E24 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CB2B8A153200E54E24 /* GradientButton.swift */; };
 		A530D0CE2B8A183C00E54E24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */; };
 		A530D0D02B8A66D400E54E24 /* BackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530D0CF2B8A66D400E54E24 /* BackgroundLayer.swift */; };
+		A54F4D6B2B97695D00E2D286 /* SirenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4D6A2B97695D00E2D286 /* SirenModel.swift */; };
+		A54F4D722B976F4E00E2D286 /* siren4.wav in Resources */ = {isa = PBXBuildFile; fileRef = A54F4D6D2B976F4D00E2D286 /* siren4.wav */; };
+		A54F4D732B976F4E00E2D286 /* siren5.wav in Resources */ = {isa = PBXBuildFile; fileRef = A54F4D6E2B976F4D00E2D286 /* siren5.wav */; };
+		A54F4D742B976F4E00E2D286 /* siren1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A54F4D6F2B976F4D00E2D286 /* siren1.wav */; };
+		A54F4D752B976F4E00E2D286 /* siren3.wav in Resources */ = {isa = PBXBuildFile; fileRef = A54F4D702B976F4D00E2D286 /* siren3.wav */; };
+		A54F4D762B976F4E00E2D286 /* siren2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A54F4D712B976F4E00E2D286 /* siren2.wav */; };
 		A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */; };
 		A5DDE0712B948AA60042DA4B /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */; };
 		A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */; };
@@ -38,6 +44,12 @@
 		A530D0CB2B8A153200E54E24 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A530D0CF2B8A66D400E54E24 /* BackgroundLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLayer.swift; sourceTree = "<group>"; };
+		A54F4D6A2B97695D00E2D286 /* SirenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenModel.swift; sourceTree = "<group>"; };
+		A54F4D6D2B976F4D00E2D286 /* siren4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = siren4.wav; sourceTree = "<group>"; };
+		A54F4D6E2B976F4D00E2D286 /* siren5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = siren5.wav; sourceTree = "<group>"; };
+		A54F4D6F2B976F4D00E2D286 /* siren1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = siren1.wav; sourceTree = "<group>"; };
+		A54F4D702B976F4D00E2D286 /* siren3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = siren3.wav; sourceTree = "<group>"; };
+		A54F4D712B976F4E00E2D286 /* siren2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = siren2.wav; sourceTree = "<group>"; };
 		A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
 		A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+cornerRadius.swift"; sourceTree = "<group>"; };
@@ -99,6 +111,7 @@
 		A530D0C02B89FDBC00E54E24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A54F4D6C2B976F1900E2D286 /* SirenSounds */,
 				A530D0B42B89F62600E54E24 /* Assets.xcassets */,
 				A530D0B62B89F62600E54E24 /* LaunchScreen.storyboard */,
 				A530D0B92B89F62600E54E24 /* Info.plist */,
@@ -120,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A5DDE0762B94B3FA0042DA4B /* SirenFrame.swift */,
+				A54F4D6A2B97695D00E2D286 /* SirenModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +163,18 @@
 				A5DDE0782B94B6860042DA4B /* SirenView.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		A54F4D6C2B976F1900E2D286 /* SirenSounds */ = {
+			isa = PBXGroup;
+			children = (
+				A54F4D6F2B976F4D00E2D286 /* siren1.wav */,
+				A54F4D712B976F4E00E2D286 /* siren2.wav */,
+				A54F4D702B976F4D00E2D286 /* siren3.wav */,
+				A54F4D6D2B976F4D00E2D286 /* siren4.wav */,
+				A54F4D6E2B976F4D00E2D286 /* siren5.wav */,
+			);
+			path = SirenSounds;
 			sourceTree = "<group>";
 		};
 		A5DDE0692B948A720042DA4B /* Extensions */ = {
@@ -222,7 +248,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54F4D752B976F4E00E2D286 /* siren3.wav in Resources */,
+				A54F4D742B976F4E00E2D286 /* siren1.wav in Resources */,
+				A54F4D722B976F4E00E2D286 /* siren4.wav in Resources */,
 				A530D0B82B89F62600E54E24 /* LaunchScreen.storyboard in Resources */,
+				A54F4D762B976F4E00E2D286 /* siren2.wav in Resources */,
+				A54F4D732B976F4E00E2D286 /* siren5.wav in Resources */,
 				A530D0B52B89F62600E54E24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +278,7 @@
 				A530D0AE2B89F62500E54E24 /* SceneDelegate.swift in Sources */,
 				A52B42FE2B9481BA00AA729A /* SirenViewController.swift in Sources */,
 				A5DDE0792B94B6860042DA4B /* SirenView.swift in Sources */,
+				A54F4D6B2B97695D00E2D286 /* SirenModel.swift in Sources */,
 				A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */,
 				A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */,
 			);
