@@ -9,7 +9,7 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
-    let gradientButton = GradientButton()
+    let gradientButton = RoundedButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
