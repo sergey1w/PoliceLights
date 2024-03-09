@@ -43,6 +43,9 @@ enum Siren: String {
     }
 }
 
+extension SirenFrame: Decodable {}
+extension Siren: Decodable {}
+
 let redBlue = SirenFrame(
     sirenOne: .red,
     sirenTwo: nil,

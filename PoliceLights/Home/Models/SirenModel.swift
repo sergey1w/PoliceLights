@@ -13,7 +13,7 @@ struct SirenModel {
     let sound: SirenSound
 }
 
-enum SirenSound {
+enum SirenSound: String {
     case police
     case firetruck
     case ambulance
@@ -30,4 +30,6 @@ enum SirenSound {
     }
 }
 
+extension SirenModel: Decodable {}
+extension SirenSound: Decodable {}
 

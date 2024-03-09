@@ -1,0 +1,282 @@
+[
+  {
+    "title": "police solid",
+    "sirens": [
+        {
+          "frames": [
+            {
+              "sirenOne": "blue",
+              "sirenTwo": "lightBlue",
+              "sirenThree": "red",
+              "sirenFour": "red"
+            }
+          ],
+          "frequency": 1,
+          "sound": "firetruck"
+        },
+        {
+          "frames": [
+            {
+              "sirenOne": "blue",
+              "sirenTwo": "lightBlue",
+              "sirenThree": "pink",
+              "sirenFour": "blue"
+            },
+            {
+              "sirenOne": "blue",
+              "sirenTwo": "pink",
+              "sirenThree": "gray",
+              "sirenFour": "red"
+            }
+          ],
+          "frequency": 6,
+          "sound": "firetruck"
+        },
+        {
+          "frames": [
+            {
+              "sirenOne": "pink",
+              "sirenTwo": "red",
+              "sirenThree": "lightBlue",
+              "sirenFour": "orange"
+            }
+          ],
+          "frequency": 3,
+          "sound": "firetruck"
+        }
+      ]
+  },
+  {
+    "title": "police dot",
+    "sirens": [
+        {
+          "frames": [
+            {
+              "sirenOne": "lightBlue",
+              "sirenTwo": "pink",
+              "sirenThree": "green",
+              "sirenFour": "green"
+            },
+            {
+              "sirenOne": "green",
+              "sirenTwo": "violet",
+              "sirenThree": "pink",
+              "sirenFour": "blue"
+            }
+          ],
+          "frequency": 20,
+          "sound": "police"
+        }
+      ]
+  },
+  {
+    "title": "police dot solid",
+    "sirens": [
+        {
+          "frames": [
+            {
+              "sirenOne": "lightBlue",
+              "sirenTwo": "green",
+              "sirenThree": "orange",
+              "sirenFour": "violet"
+            },
+            {
+              "sirenOne": "violet",
+              "sirenTwo": "orange",
+              "sirenThree": "gray",
+              "sirenFour": "lightBlue"
+            }
+          ],
+          "frequency": 20,
+          "sound": "firetruck"
+        },
+        {
+          "frames": [
+            {
+              "sirenOne": "violet",
+              "sirenTwo": "pink",
+              "sirenThree": "violet",
+              "sirenFour": "gray"
+            }
+          ],
+          "frequency": 1,
+          "sound": "ambulance"
+        },
+        {
+          "frames": [
+            {
+              "sirenOne": "pink",
+              "sirenTwo": "green",
+              "sirenThree": "gray",
+              "sirenFour": "green"
+            },
+            {
+              "sirenOne": "violet",
+              "sirenTwo": "red",
+              "sirenThree": "green",
+              "sirenFour": "violet"
+            }
+          ],
+          "frequency": 1,
+          "sound": "ambulance"
+        }
+      ]
+  },
+  {
+    "title": "ambulance",
+    "sirens": [
+        {
+          "frames": [
+            {
+              "sirenOne": "red",
+              "sirenTwo": "green",
+              "sirenThree": "blue",
+              "sirenFour": "violet"
+            }
+          ],
+          "frequency": 20,
+          "sound": "police"
+        }
+      ]
+  },
+  {
+    "title": "fire truck",
+    "sirens": [
+      {
+        "frames": [
+          {
+            "sirenOne": "orange",
+            "sirenTwo": "violet",
+            "sirenThree": "gray",
+            "sirenFour": "lightBlue"
+          }
+        ],
+        "frequency": 20,
+        "sound": "firetruck"
+      }
+    ]
+  },
+  {
+    "title": "blue pure dot",
+    "sirens": [
+        {
+          "frames": [
+            {
+              "sirenOne": "green",
+              "sirenTwo": "pink",
+              "sirenThree": "violet",
+              "sirenFour": "pink"
+            },
+            {
+              "sirenOne": "lightBlue",
+              "sirenTwo": "lightBlue",
+              "sirenThree": "orange",
+              "sirenFour": "green"
+            }
+          ],
+          "frequency": 6,
+          "sound": "police"
+        }
+      ]
+  },
+  {
+    "title": "orange",
+    "sirens": [
+        {
+          "frames": [
+            {
+              "sirenOne": "blue",
+              "sirenTwo": "red",
+              "sirenThree": "blue",
+              "sirenFour": "lightBlue"
+            }
+          ],
+          "frequency": 3,
+          "sound": "police"
+        },
+        {
+          "frames": [
+            {
+              "sirenOne": "orange",
+              "sirenTwo": "gray",
+              "sirenThree": "green",
+              "sirenFour": "violet"
+            },
+            {
+              "sirenOne": "gray",
+              "sirenTwo": "blue",
+              "sirenThree": "violet",
+              "sirenFour": "red"
+            }
+          ],
+          "frequency": 6,
+          "sound": "firetruck"
+        },
+        {
+          "frames": [
+            {
+              "sirenOne": "gray",
+              "sirenTwo": "red",
+              "sirenThree": "orange",
+              "sirenFour": "orange"
+            }
+          ],
+          "frequency": 3,
+          "sound": "firetruck"
+        }
+      ]
+  },
+  {
+    "title": "music",
+    "sirens": [
+        {
+          "frames": [
+            {
+              "sirenOne": "lightBlue",
+              "sirenTwo": "red",
+              "sirenThree": "pink",
+              "sirenFour": "green"
+            },
+            {
+              "sirenOne": "lightBlue",
+              "sirenTwo": "violet",
+              "sirenThree": "gray",
+              "sirenFour": "pink"
+            }
+          ],
+          "frequency": 20,
+          "sound": "ambulance"
+        },
+        {
+          "frames": [
+            {
+              "sirenOne": "orange",
+              "sirenTwo": "red",
+              "sirenThree": "pink",
+              "sirenFour": "lightBlue"
+            },
+            {
+              "sirenOne": "orange",
+              "sirenTwo": "lightBlue",
+              "sirenThree": "violet",
+              "sirenFour": "orange"
+            }
+          ],
+          "frequency": 6,
+          "sound": "firetruck"
+        },
+        {
+          "frames": [
+            {
+              "sirenOne": "blue",
+              "sirenTwo": "lightBlue",
+              "sirenThree": "lightBlue",
+              "sirenFour": "pink"
+            }
+          ],
+          "frequency": 20,
+          "sound": "firetruck"
+        }
+      ]
+  }
+]
