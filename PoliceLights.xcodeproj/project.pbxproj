@@ -26,6 +26,8 @@
 		A54F4D802B97991A00E2D286 /* ReadySirenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4D7F2B97991A00E2D286 /* ReadySirenViewController.swift */; };
 		A54F4D882B97994900E2D286 /* CreateSirenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4D872B97994900E2D286 /* CreateSirenViewController.swift */; };
 		A54F4D8A2B97A35100E2D286 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4D892B97A35100E2D286 /* RoundedButton.swift */; };
+		A5562E5F2B9C8A6E00574446 /* TabSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5562E5E2B9C8A6E00574446 /* TabSegmentedControl.swift */; };
+		A5562E632B9CB7BF00574446 /* UIViewController+children.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5562E622B9CB7BF00574446 /* UIViewController+children.swift */; };
 		A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */; };
 		A5DDE0712B948AA60042DA4B /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */; };
 		A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */; };
@@ -58,6 +60,8 @@
 		A54F4D7F2B97991A00E2D286 /* ReadySirenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadySirenViewController.swift; sourceTree = "<group>"; };
 		A54F4D872B97994900E2D286 /* CreateSirenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSirenViewController.swift; sourceTree = "<group>"; };
 		A54F4D892B97A35100E2D286 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		A5562E5E2B9C8A6E00574446 /* TabSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSegmentedControl.swift; sourceTree = "<group>"; };
+		A5562E622B9CB7BF00574446 /* UIViewController+children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+children.swift"; sourceTree = "<group>"; };
 		A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
 		A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+cornerRadius.swift"; sourceTree = "<group>"; };
@@ -98,14 +102,14 @@
 		A530D0AA2B89F62500E54E24 /* PoliceLights */ = {
 			isa = PBXGroup;
 			children = (
-				A54F4D7E2B97990F00E2D286 /* Create */,
-				A54F4D7D2B97990900E2D286 /* Ready */,
-				A54F4D792B9797BB00E2D286 /* TabBar */,
-				A5DDE0692B948A720042DA4B /* Extensions */,
 				A530D0BF2B89FDAA00E54E24 /* Application */,
+				A54F4D7E2B97990F00E2D286 /* Create */,
 				A530D0CA2B8A151900E54E24 /* CustomViews */,
+				A5DDE0692B948A720042DA4B /* Extensions */,
 				A530D0C32B89FDF900E54E24 /* Home */,
+				A54F4D7D2B97990900E2D286 /* Ready */,
 				A530D0C02B89FDBC00E54E24 /* Resources */,
+				A54F4D792B9797BB00E2D286 /* TabBar */,
 			);
 			path = PoliceLights;
 			sourceTree = "<group>";
@@ -173,6 +177,7 @@
 				A530D0C82B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift */,
 				A5DDE0782B94B6860042DA4B /* SirenView.swift */,
 				A54F4D892B97A35100E2D286 /* RoundedButton.swift */,
+				A5562E5E2B9C8A6E00574446 /* TabSegmentedControl.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				A5DDE06E2B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift */,
 				A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */,
 				A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */,
+				A5562E622B9CB7BF00574446 /* UIViewController+children.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -363,10 +369,12 @@
 				A54F4D8A2B97A35100E2D286 /* RoundedButton.swift in Sources */,
 				A54F4D7B2B97982200E2D286 /* TabBarViewController.swift in Sources */,
 				A5DDE0752B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift in Sources */,
+				A5562E5F2B9C8A6E00574446 /* TabSegmentedControl.swift in Sources */,
 				A530D0AE2B89F62500E54E24 /* SceneDelegate.swift in Sources */,
 				A52B42FE2B9481BA00AA729A /* SirenViewController.swift in Sources */,
 				A5DDE0792B94B6860042DA4B /* SirenView.swift in Sources */,
 				A54F4D6B2B97695D00E2D286 /* SirenModel.swift in Sources */,
+				A5562E632B9CB7BF00574446 /* UIViewController+children.swift in Sources */,
 				A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */,
 				A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */,
 			);

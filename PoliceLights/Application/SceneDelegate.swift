@@ -20,9 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let vc = HomeViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        window.rootViewController = nav
+//        let vc = HomeViewController()
+//        let nav = UINavigationController(rootViewController: vc)
+        window.rootViewController = TabBarViewController()
         window.layer.insertSublayer(backgroundLayer, at: 0)
         backgroundLayer.frame = window.bounds
         window.makeKeyAndVisible()

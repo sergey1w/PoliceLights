@@ -7,12 +7,51 @@
 
 import UIKit
 
-final class TabBarViewController: UITabBarController {
-
+final class TabBarViewController: UIViewController {
+    
+    private let tabControl = TabSegmentedControl()
+    
+    private let createController = CreateSirenViewController()
+    private let readyController = ReadySirenViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    private func setupUI() {
+        tabControl.delegate = self
+        add(createController)
+        add(readyController)
+        self.view.addSubview(tabControl)
+        makeConstraints()
+        tabControl.setReadyTab()
+    }
+    
+    private func makeConstraints() {
+        tabControl.snap(to: self.view.safeAreaLayoutGuide, [.top], constant: 16)
+        tabControl.snap(to: self.view.safeAreaLayoutGuide, [.centerX])
+        NSLayoutConstraint.activate([
+            tabControl.widthAnchor.constraint(equalToConstant: 342),
+            tabControl.heightAnchor.constraint(equalToConstant: 56)
+        ])
         
+        createController.view.snap(to: self.view.safeAreaLayoutGuide, [.leading,.bottom,.trailing])
+        NSLayoutConstraint.snap([tabControl.bottomAnchor], [createController.view.topAnchor])
         
-//        let ready = 
+        readyController.view.snap(to: self.view.safeAreaLayoutGuide, [.leading,.bottom,.trailing])
+        NSLayoutConstraint.snap([tabControl.bottomAnchor], [readyController.view.topAnchor])
+    }
+}
+
+extension TabBarViewController: TabSegmentedControlDelegate {
+    func setCreateTab() {
+        readyController.view.isHidden = true
+        createController.view.isHidden = false
+    }
+    
+    func setReadyTab() {
+        readyController.view.isHidden = false
+        createController.view.isHidden = true
     }
 }
