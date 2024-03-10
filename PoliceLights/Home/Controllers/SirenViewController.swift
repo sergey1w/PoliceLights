@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFAudio
 
 final class SirenViewController: UIViewController {
     
@@ -14,6 +15,8 @@ final class SirenViewController: UIViewController {
     private var timer: Timer? = nil
     private let model: SirenModel
     
+    private var audioPlayer: AVAudioPlayer?
+    
     init(model: SirenModel) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
@@ -21,6 +24,7 @@ final class SirenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAudioPlayer()
         setupUI()
         startFlashing()
     }
@@ -34,10 +38,12 @@ final class SirenViewController: UIViewController {
             repeats: true
         )
         displaySirenLights()
+        audioPlayer?.play()
     }
     
     func stopFlashing() {
         timer?.invalidate()
+        audioPlayer?.stop()
     }
     
     @objc private func displaySirenLights() {
@@ -49,7 +55,7 @@ final class SirenViewController: UIViewController {
     }
     
     @objc private func closeSiren() {
-        timer?.invalidate()
+        stopFlashing()
         dismiss(animated: true)
     }
     
@@ -63,6 +69,18 @@ private extension SirenViewController {
         setupSirenView()
         let gesture = UITapGestureRecognizer(target: self, action: #selector(closeSiren))
         sirenView.addGestureRecognizer(gesture)
+    }
+    
+    func setupAudioPlayer() {
+        if let soundURL = model.sound?.audioURL {
+            do {
+                self.audioPlayer = try .init(contentsOf: soundURL)
+                self.audioPlayer?.numberOfLoops = -1
+                self.audioPlayer?.prepareToPlay()
+            } catch {
+                
+            }
+        }
     }
     
     func setupSirenView() {

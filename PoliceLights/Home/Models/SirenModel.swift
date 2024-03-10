@@ -10,7 +10,7 @@ import Foundation
 struct SirenModel {
     let frames: [SirenFrame]
     let frequency: Double
-    let sound: SirenSound
+    let sound: SirenSound?
 }
 
 enum SirenSound: String, CaseIterable {
@@ -23,15 +23,15 @@ enum SirenSound: String, CaseIterable {
     var audioURL: URL? {
         switch self {
         case .police:
-            return Bundle.main.url(forResource: "siren1", withExtension: "waw")
+            return Bundle.main.url(forResource: "siren1", withExtension: "wav")
         case .firetruck:
-            return Bundle.main.url(forResource: "siren2", withExtension: "waw")
+            return Bundle.main.url(forResource: "siren2", withExtension: "wav")
         case .ambulance:
-            return Bundle.main.url(forResource: "siren3", withExtension: "waw")
+            return Bundle.main.url(forResource: "siren3", withExtension: "wav")
         case .sirenFour:
-            return Bundle.main.url(forResource: "siren4", withExtension: "waw")
+            return Bundle.main.url(forResource: "siren4", withExtension: "wav")
         case .sirenFive:
-            return Bundle.main.url(forResource: "siren5", withExtension: "waw")
+            return Bundle.main.url(forResource: "siren5", withExtension: "wav")
         }
     }
 }

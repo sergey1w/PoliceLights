@@ -7,11 +7,23 @@
 
 import UIKit
 
+protocol RoundedButtonGroupContainer: AnyObject {
+    associatedtype Selection
+    var buttonGroup: RoundedButtonGroup<Selection> { get }
+    func setDelegate(_ delegate: RoundedButtonGroupDelegate) -> Void
+    func configure(title: String, selections: [Selection])
+}
+
+protocol RoundedButtonGroupDelegate: AnyObject {
+    func selected<T>(selection: T) -> Void
+}
+
 final class RoundedButtonGroup<Selection>: UIView {
     
     private(set) var selection: Selection?
     private(set) var selections: [Selection] = []
     private let offButton: Bool
+    weak var delegate: (any RoundedButtonGroupDelegate)?
     
     init(offButton: Bool = false) {
         self.offButton = offButton
@@ -75,6 +87,13 @@ final class RoundedButtonGroup<Selection>: UIView {
         } else {
             selection = selections[tag - 1]
         }
+        if offButton {
+            buttonStack.arrangedSubviews.forEach { view in
+                (view as? RoundedButton)?.setNormal()
+            }
+            sender.setSelected()
+        }
+        delegate?.selected(selection: selection)
     }
     
     private func makeButton(_ title: String) -> RoundedButton {
