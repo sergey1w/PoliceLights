@@ -1,5 +1,5 @@
 //
-//  ReadySirenCollectionViewCell.swift
+//  ReadySirensHeaderFooterView.swift
 //  PoliceLights
 //
 //  Created by sergey on 10.03.2024.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class ReadySirenCollectionViewCell: UICollectionViewCell {
-    static let reuseID = #function
-    private let buttonGroup = RoundedButtonGroup<SirenModel>(offButton: false)
+final class ReadySirensHeaderFooterView: UICollectionReusableView {
+    
+    private let buttonGroup = RoundedButtonGroup<SirenSound>(offButton: true)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,10 +19,7 @@ final class ReadySirenCollectionViewCell: UICollectionViewCell {
     private func setupUI() {
         addSubview(buttonGroup)
         buttonGroup.snap(to: self, [.leading,.trailing,.top,.bottom])
-    }
-    
-    func configure(_ model: ReadySirenModel) {
-        buttonGroup.configure(title: model.title.uppercased(), selections: model.sirens)
+        buttonGroup.configure(title: "Sirens", selections: SirenSound.allCases)
     }
     
     required init?(coder: NSCoder) {
@@ -30,9 +27,12 @@ final class ReadySirenCollectionViewCell: UICollectionViewCell {
     }
 }
 
-//final class ReadySirenCollectionViewCell: UICollectionViewCell {
-//    
+
+
+
+//final class ReadySirensHeaderFooterView: UICollectionReusableView {
 //    static let reuseID = #function
+//    
 //    
 //    private let label = UILabel()
 //    private let buttonStack = {
@@ -50,29 +50,30 @@ final class ReadySirenCollectionViewCell: UICollectionViewCell {
 //    }
 //    
 //    private func setupUI() {
-//        contentView.addSubview(label)
-//        contentView.addSubview(buttonStack)
-//        label.snap(to: contentView, [.leading,.trailing,.top])
-//        buttonStack.snap(to: contentView, [.leading,.bottom])
+//        addSubview(label)
+//        addSubview(buttonStack)
+//        label.snap(to: self, [.leading,.trailing,.top])
+//        buttonStack.snap(to: self, [.leading,.bottom])
 //        buttonStack.snap(to: label, [.trailing], .lessThanOrEqual)
 //        NSLayoutConstraint.snap([buttonStack.topAnchor], [label.bottomAnchor], constants: [8])
-//    }
-//    
-//    func configure(_ model: ReadySirenModel) {
 //        label.attributedText = NSAttributedString.attributedString(
-//            model.title.uppercased(),
+//            "Sirens",
 //            fontSize: 19,
 //            lineHeight: 24
 //        )
 //        buttonStack.removeArrangedSubviews()
+//        buttonStack.addArrangedSubview(makeButton("Off"))
 //        buttonStack.addArrangedSubviews(
-//            (0..<model.sirens.count).map { index in
-//                makeButton(String(index + 1))
+//            (0..<5).map { index in
+//                let btn = makeButton(String(index + 1))
+////                btn.addTarget(nil, action: #selector(<#T##@objc method#>), for: .touchUpInside)
+//                return btn
 //            }
 //        )
 //    }
 //    
 //    private func makeButton(_ title: String) -> RoundedButton {
+////        SirenViewController(model: <#T##SirenModel#>)
 //        let btn = RoundedButton()
 //        btn.setTitle(title, for: .normal)
 //        btn.showBorder()
