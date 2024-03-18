@@ -34,7 +34,8 @@ final class HomeViewController: UIViewController {
     
     
     @objc private func lego() {
-        let vc = SirenViewController(model: .init(frames: mockFrames, frequency: 3, sound: .police))
+        let model = SirenModel(frames: mockFrames, frequency: 3)
+        let vc = SirenViewController(model: model, sound: .police)
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true)

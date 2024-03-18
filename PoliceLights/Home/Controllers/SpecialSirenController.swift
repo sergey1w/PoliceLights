@@ -1,24 +1,24 @@
 //
-//  SirenViewController.swift
+//  SpecialSirenController.swift
 //  PoliceLights
 //
-//  Created by sergey on 03.03.2024.
+//  Created by sergey on 10.03.2024.
 //
 
 import UIKit
 import AVFAudio
 
-final class SirenViewController: UIViewController {
+final class SpecialSirenController: UIViewController {
     
-    private let sirenView = SirenView(frame: .zero)
+//    private let sirenView = SirenView(frame: .zero)
     private var frameIndex = 0
     private var timer: Timer? = nil
-    private let model: SirenModel
+    private let model: SpecialSiren
     private let sound: SirenSound?
     
     private var audioPlayer: AVAudioPlayer?
     
-    init(model: SirenModel, sound: SirenSound?) {
+    init(model: SpecialSiren, sound: SirenSound?) {
         self.model = model
         self.sound = sound
         super.init(nibName: nil, bundle: nil)
@@ -32,13 +32,13 @@ final class SirenViewController: UIViewController {
     }
     
     func startFlashing() {
-        timer = Timer.scheduledTimer(
-            timeInterval: 1.0 / model.frequency,
-            target: self,
-            selector: #selector(displaySirenLights),
-            userInfo: nil,
-            repeats: true
-        )
+//        timer = Timer.scheduledTimer(
+//            timeInterval: 1.0 / model.frequency,
+//            target: self,
+//            selector: #selector(displaySirenLights),
+//            userInfo: nil,
+//            repeats: true
+//        )
         displaySirenLights()
         audioPlayer?.play()
     }
@@ -49,11 +49,11 @@ final class SirenViewController: UIViewController {
     }
     
     @objc private func displaySirenLights() {
-        UIView.animate(withDuration: 0) { [self] in
-            sirenView.setFrame(frame: model.frames[frameIndex])
-        } completion: { [self] _ in
-            frameIndex = (frameIndex + 1) % model.frames.count
-        }
+//        UIView.animate(withDuration: 0) { [self] in
+//            sirenView.setFrame(frame: model.frames[frameIndex])
+//        } completion: { [self] _ in
+//            frameIndex = (frameIndex + 1) % model.frames.count
+//        }
     }
     
     @objc private func closeSiren() {
@@ -66,11 +66,11 @@ final class SirenViewController: UIViewController {
     }
 }
 
-private extension SirenViewController {
+private extension SpecialSirenController {
     func setupUI() {
-        setupSirenView()
+//        setupSirenView()
         let gesture = UITapGestureRecognizer(target: self, action: #selector(closeSiren))
-        sirenView.addGestureRecognizer(gesture)
+//        sirenView.addGestureRecognizer(gesture)
     }
     
     func setupAudioPlayer() {
@@ -85,8 +85,8 @@ private extension SirenViewController {
         }
     }
     
-    func setupSirenView() {
-        view.addSubview(sirenView)
-        sirenView.snap(to: self.view.safeAreaLayoutGuide, [.leading,.trailing, .top, .bottom])
-    }
+//    func setupSirenView() {
+//        view.addSubview(sirenView)
+//        sirenView.snap(to: self.view.safeAreaLayoutGuide, [.leading,.trailing, .top, .bottom])
+//    }
 }

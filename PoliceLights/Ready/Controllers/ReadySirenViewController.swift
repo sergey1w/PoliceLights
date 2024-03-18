@@ -107,10 +107,14 @@ extension ReadySirenViewController: RoundedButtonGroupDelegate {
         switch selection {
         case let sound as Optional<SirenSound>:
             sirenSound = sound
-        case let model as SirenModel:
-            debugPrint(model)
-            let model = SirenModel(frames: model.frames, frequency: model.frequency, sound: sirenSound)
-            let vc = SirenViewController(model: model)
+        case let readySiren as ReadySiren:
+            let vc: UIViewController
+            switch readySiren {
+            case .siren(let sirenModel):
+                vc = SirenViewController(model: sirenModel, sound: sirenSound)
+            case .special(let specialSirenModel):
+                vc = SpecialSirenController(model: specialSirenModel, sound: sirenSound)
+            }
             vc.modalPresentationStyle = .fullScreen
             vc.modalTransitionStyle = .crossDissolve
             present(vc, animated: true)

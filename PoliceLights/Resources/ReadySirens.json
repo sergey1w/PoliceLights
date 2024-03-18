@@ -1,50 +1,7 @@
 [
   {
     "title": "police solid",
-    "sirens": [
-        {
-          "frames": [
-            {
-              "sirenOne": "blue",
-              "sirenTwo": "lightBlue",
-              "sirenThree": "red",
-              "sirenFour": "red"
-            }
-          ],
-          "frequency": 1,
-          "sound": "firetruck"
-        },
-        {
-          "frames": [
-            {
-              "sirenOne": "blue",
-              "sirenTwo": "lightBlue",
-              "sirenThree": "pink",
-              "sirenFour": "blue"
-            },
-            {
-              "sirenOne": "blue",
-              "sirenTwo": "pink",
-              "sirenThree": "gray",
-              "sirenFour": "red"
-            }
-          ],
-          "frequency": 6,
-          "sound": "firetruck"
-        },
-        {
-          "frames": [
-            {
-              "sirenOne": "pink",
-              "sirenTwo": "red",
-              "sirenThree": "lightBlue",
-              "sirenFour": "orange"
-            }
-          ],
-          "frequency": 3,
-          "sound": "firetruck"
-        }
-      ]
+    "sirens": ["policeSolid1","policeSolid2","policeSolid3"]
   },
   {
     "title": "police dot",
@@ -64,8 +21,7 @@
               "sirenFour": "blue"
             }
           ],
-          "frequency": 20,
-          "sound": "police"
+          "frequency": 20
         }
       ]
   },
@@ -87,8 +43,7 @@
               "sirenFour": "lightBlue"
             }
           ],
-          "frequency": 20,
-          "sound": "firetruck"
+          "frequency": 20
         },
         {
           "frames": [
@@ -99,8 +54,7 @@
               "sirenFour": "gray"
             }
           ],
-          "frequency": 1,
-          "sound": "ambulance"
+          "frequency": 1
         },
         {
           "frames": [
@@ -117,8 +71,7 @@
               "sirenFour": "violet"
             }
           ],
-          "frequency": 1,
-          "sound": "ambulance"
+          "frequency": 1
         }
       ]
   },
@@ -134,27 +87,13 @@
               "sirenFour": "violet"
             }
           ],
-          "frequency": 20,
-          "sound": "police"
+          "frequency": 20
         }
       ]
   },
   {
     "title": "fire truck",
-    "sirens": [
-      {
-        "frames": [
-          {
-            "sirenOne": "orange",
-            "sirenTwo": "violet",
-            "sirenThree": "gray",
-            "sirenFour": "lightBlue"
-          }
-        ],
-        "frequency": 20,
-        "sound": "firetruck"
-      }
-    ]
+    "sirens": ["firetruck1", "firetruck2"]
   },
   {
     "title": "blue pure dot",
@@ -174,8 +113,7 @@
               "sirenFour": "green"
             }
           ],
-          "frequency": 6,
-          "sound": "police"
+          "frequency": 6
         }
       ]
   },
@@ -191,8 +129,7 @@
               "sirenFour": "lightBlue"
             }
           ],
-          "frequency": 3,
-          "sound": "police"
+          "frequency": 3
         },
         {
           "frames": [
@@ -209,8 +146,7 @@
               "sirenFour": "red"
             }
           ],
-          "frequency": 6,
-          "sound": "firetruck"
+          "frequency": 6
         },
         {
           "frames": [
@@ -221,8 +157,7 @@
               "sirenFour": "orange"
             }
           ],
-          "frequency": 3,
-          "sound": "firetruck"
+          "frequency": 3
         }
       ]
   },
@@ -244,8 +179,7 @@
               "sirenFour": "pink"
             }
           ],
-          "frequency": 20,
-          "sound": "ambulance"
+          "frequency": 20
         },
         {
           "frames": [
@@ -262,8 +196,7 @@
               "sirenFour": "orange"
             }
           ],
-          "frequency": 6,
-          "sound": "firetruck"
+          "frequency": 6
         },
         {
           "frames": [
@@ -274,8 +207,7 @@
               "sirenFour": "pink"
             }
           ],
-          "frequency": 20,
-          "sound": "firetruck"
+          "frequency": 20
         }
       ]
   }

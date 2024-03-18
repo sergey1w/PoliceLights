@@ -36,6 +36,7 @@
 		A5562E722B9D156A00574446 /* NSAtrributedString+attributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5562E712B9D156A00574446 /* NSAtrributedString+attributedString.swift */; };
 		A5562E742B9DE8F700574446 /* ReadySirensHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5562E732B9DE8F700574446 /* ReadySirensHeaderFooterView.swift */; };
 		A5562E762B9DF27600574446 /* RoundedButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5562E752B9DF27600574446 /* RoundedButtonGroup.swift */; };
+		A5562E782B9E537F00574446 /* SpecialSirenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5562E772B9E537F00574446 /* SpecialSirenController.swift */; };
 		A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */; };
 		A5DDE0712B948AA60042DA4B /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */; };
 		A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */; };
@@ -78,6 +79,7 @@
 		A5562E712B9D156A00574446 /* NSAtrributedString+attributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAtrributedString+attributedString.swift"; sourceTree = "<group>"; };
 		A5562E732B9DE8F700574446 /* ReadySirensHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadySirensHeaderFooterView.swift; sourceTree = "<group>"; };
 		A5562E752B9DF27600574446 /* RoundedButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonGroup.swift; sourceTree = "<group>"; };
+		A5562E772B9E537F00574446 /* SpecialSirenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialSirenController.swift; sourceTree = "<group>"; };
 		A5DDE06A2B948AA60042DA4B /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
 		A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+cornerRadius.swift"; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 		A530D0AA2B89F62500E54E24 /* PoliceLights */ = {
 			isa = PBXGroup;
 			children = (
-				A5562E692B9D0B3D00574446 /* Service */,
 				A5562E642B9CBC2B00574446 /* AlignedCollectionViewFlowLayout.swift */,
 				A530D0BF2B89FDAA00E54E24 /* Application */,
 				A54F4D7E2B97990F00E2D286 /* Create */,
@@ -127,6 +128,7 @@
 				A530D0C32B89FDF900E54E24 /* Home */,
 				A54F4D7D2B97990900E2D286 /* Ready */,
 				A530D0C02B89FDBC00E54E24 /* Resources */,
+				A5562E692B9D0B3D00574446 /* Service */,
 				A54F4D792B9797BB00E2D286 /* TabBar */,
 			);
 			path = PoliceLights;
@@ -184,6 +186,7 @@
 			children = (
 				A530D0CD2B8A183B00E54E24 /* HomeViewController.swift */,
 				A52B42FD2B9481BA00AA729A /* SirenViewController.swift */,
+				A5562E772B9E537F00574446 /* SpecialSirenController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				A54F4D7B2B97982200E2D286 /* TabBarViewController.swift in Sources */,
 				A5562E6B2B9D0B9600574446 /* ReadySirensDataProvider.swift in Sources */,
 				A5DDE0752B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift in Sources */,
+				A5562E782B9E537F00574446 /* SpecialSirenController.swift in Sources */,
 				A5562E5F2B9C8A6E00574446 /* TabSegmentedControl.swift in Sources */,
 				A530D0AE2B89F62500E54E24 /* SceneDelegate.swift in Sources */,
 				A5562E722B9D156A00574446 /* NSAtrributedString+attributedString.swift in Sources */,

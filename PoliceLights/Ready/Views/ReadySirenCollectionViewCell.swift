@@ -10,7 +10,7 @@ import UIKit
 final class ReadySirenCollectionViewCell: UICollectionViewCell {
     static let reuseID = #function
     
-    let buttonGroup = RoundedButtonGroup<SirenModel>(offButton: false)
+    let buttonGroup = RoundedButtonGroup<Selection>(offButton: false)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,11 +29,13 @@ final class ReadySirenCollectionViewCell: UICollectionViewCell {
 }
 
 extension ReadySirenCollectionViewCell: RoundedButtonGroupContainer {
+    typealias Selection = ReadySiren
+    
     func setDelegate(_ delegate: RoundedButtonGroupDelegate) {
         buttonGroup.delegate = delegate
     }
     
-    func configure(title: String, selections: [SirenModel]) {
+    func configure(title: String, selections: [Selection]) {
         buttonGroup.configure(title: title, selections: selections)
     }
 }
