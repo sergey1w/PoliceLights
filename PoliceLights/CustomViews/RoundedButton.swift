@@ -7,33 +7,43 @@
 
 import UIKit
 
-final class RoundedButton: UIButton {
+final class RoundedButton: GradientButton {
     
-    private let gradientLayer = CAGradientLayer.gradientLayer(in: .zero)
+//    private let gradientLayer = CAGradientLayer.gradientLayer(in: .zero)
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        setupUI()
+//    }
+    
+    override init() {
+        super.init()
         setupUI()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        gradientLayer.frame = bounds
-    }
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        gradientLayer.frame = bounds
+//    }
     
     override func setTitle(_ title: String?, for state: UIControl.State) {
         guard let title = title else { return }
-        let attributedTitle = attributedString(title)
+        let attributedTitle = /*attributedString(title)*/
+        NSAttributedString.attributedString(
+            title,
+            fontSize: Constants.fontSize,
+            lineHeight: Constants.lineHeight
+        )
         setAttributedTitle(attributedTitle, for: state)
     }
     
-    func setSelected() {
-        gradientLayer.isHidden = false
-    }
+//    func setSelected() {
+//        gradientLayer.isHidden = false
+//    }
     
-    func setNormal() {
-        gradientLayer.isHidden = true
-    }
+//    func setNormal() {
+//        gradientLayer.isHidden = true
+//    }
     
     func hideBorder() {
         layer.borderWidth = 0
@@ -62,29 +72,13 @@ extension RoundedButton {
     }
 }
 
-// MARK: Private methods
-private extension RoundedButton {
-    private func attributedString(_ str: String) -> NSAttributedString {
-        let font = UIFont.systemFont(ofSize: Constants.fontSize, weight: .medium)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = Constants.lineHeight - Constants.fontSize - (font.lineHeight - font.pointSize)
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font : font,
-            .foregroundColor: UIColor.Colors.white,
-            .paragraphStyle : paragraphStyle
-        ]
-        let attrStr = NSAttributedString(string: str, attributes: attributes)
-        return attrStr
-    }
-}
-
 // MARK: UI Setup
 private extension RoundedButton {
     private func setupUI() {
         layer.cornerRadius = Constants.cornerRadius
         layer.backgroundColor = Constants.backgroundColor
         layer.masksToBounds = true
-        layer.insertSublayer(gradientLayer, at: 0)
+//        layer.insertSublayer(gradientLayer, at: 0)
         layer.borderColor = Constants.borderColor
         setNormal()
         hideBorder()

@@ -33,7 +33,7 @@ final class SirenViewController: UIViewController {
     
     func startFlashing() {
         timer = Timer.scheduledTimer(
-            timeInterval: 1.0 / model.frequency,
+            timeInterval: 1.0 / Double(model.frequency),
             target: self,
             selector: #selector(displaySirenLights),
             userInfo: nil,

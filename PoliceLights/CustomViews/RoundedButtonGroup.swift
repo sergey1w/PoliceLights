@@ -22,11 +22,15 @@ final class RoundedButtonGroup<Selection>: UIView {
     
     private(set) var selection: Selection?
     private(set) var selections: [Selection] = []
+    private let titleHidden: Bool
     private let offButton: Bool
+    private let selectable: Bool
     weak var delegate: (any RoundedButtonGroupDelegate)?
     
-    init(offButton: Bool = false) {
+    init(titleHidden: Bool = false, offButton: Bool = false, selectable: Bool = true) {
+        self.titleHidden = titleHidden
         self.offButton = offButton
+        self.selectable = selectable
         super.init(frame: .zero)
         setupUI()
     }
@@ -44,23 +48,28 @@ final class RoundedButtonGroup<Selection>: UIView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.distribution = .equalSpacing
-        stack.alignment = .bottom
+        stack.alignment = .top
         stack.spacing = 8
         return stack
     }()
     
     private func setupUI() {
         addSubview(stackView)
-        stackView.addArrangedSubviews([label, buttonStack])
+        if !titleHidden {
+            stackView.addArrangedSubview(label)
+        }
+        stackView.addArrangedSubview(buttonStack)
         stackView.snap(to: self, [.leading,.top,.bottom,.trailing])
     }
     
     func configure(title: String, selections: [Selection]) {
-        label.attributedText = NSAttributedString.attributedString(
-            title,
-            fontSize: 19,
-            lineHeight: 24
-        )
+        if !titleHidden {
+            label.attributedText = NSAttributedString.attributedString(
+                title,
+                fontSize: 19,
+                lineHeight: 24
+            )
+        }
         self.selections = selections
         buttonStack.removeArrangedSubviews()
         if offButton {
@@ -70,8 +79,9 @@ final class RoundedButtonGroup<Selection>: UIView {
             buttonStack.addArrangedSubview(offButton)
         }
         buttonStack.addArrangedSubviews(
-            (0..<selections.count).map { index in
-                let button = makeButton(String(index + 1))
+            selections.enumerated().map { index, selection in
+                let strSelection = selection as? CustomStringConvertible
+                let button = makeButton(strSelection?.description ?? String(index + 1))
                 button.tag = index + 1
                 button.addTarget(self, action: #selector(testmethod(sender:)), for: .touchUpInside)
                 return button
@@ -87,7 +97,7 @@ final class RoundedButtonGroup<Selection>: UIView {
         } else {
             selection = selections[tag - 1]
         }
-        if offButton {
+        if selectable {
             buttonStack.arrangedSubviews.forEach { view in
                 (view as? RoundedButton)?.setNormal()
             }

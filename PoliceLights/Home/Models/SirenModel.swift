@@ -9,7 +9,7 @@ import Foundation
 
 struct SirenModel {
     let frames: [SirenFrame]
-    let frequency: Double
+    let frequency: Int
 }
 
 enum SirenSound: String, CaseIterable {
@@ -31,6 +31,18 @@ enum SirenSound: String, CaseIterable {
             return Bundle.main.url(forResource: "siren4", withExtension: "wav")
         case .sirenFive:
             return Bundle.main.url(forResource: "siren5", withExtension: "wav")
+        }
+    }
+}
+
+extension SirenSound: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .police: "1"
+        case .firetruck: "2"
+        case .ambulance: "3"
+        case .sirenFour: "4"
+        case .sirenFive: "5"
         }
     }
 }

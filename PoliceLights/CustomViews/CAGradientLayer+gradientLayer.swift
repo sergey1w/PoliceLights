@@ -21,8 +21,8 @@ extension CAGradientLayer {
     }
     
     private static func colors() -> [CGColor] {
-        let beginColor = UIColor(red: 0.604, green: 0.227, blue: 0.98, alpha: 1).cgColor
-        let endColor = UIColor(red: 0.671, green: 0.035, blue: 0.776, alpha: 1).cgColor
+        let beginColor = UIColor.Colors.gradientBegin.cgColor
+        let endColor = UIColor.Colors.gradientEnd.cgColor
         
         return [beginColor, endColor]
     }

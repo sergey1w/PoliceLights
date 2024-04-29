@@ -24,10 +24,29 @@ struct SirenFrame {
         [sirenOne, sirenTwo, sirenThree, sirenFour]
     }
     
-    static let empty = SirenFrame()
+    subscript(index: Int) -> Siren? {
+        get {
+            switch index {
+            case 0: sirenOne
+            case 1: sirenTwo
+            case 2: sirenThree
+            case 3: sirenFour
+            default: nil
+            }
+        }
+        set {
+            func getSiren(_ i: Int) -> Siren? { i == index ? newValue : self[i] }
+            self = Self(
+                sirenOne: getSiren(0),
+                sirenTwo: getSiren(1),
+                sirenThree: getSiren(2),
+                sirenFour: getSiren(3)
+            )
+        }
+    }
 }
 
-enum Siren: String {
+enum Siren: String, CaseIterable {
     case gray
     case pink
     case red
@@ -42,6 +61,8 @@ enum Siren: String {
         return .init(resource: resource)
     }
 }
+
+extension Siren: HashFindable {}
 
 extension SirenFrame: Decodable {}
 extension Siren: Decodable {}
@@ -81,3 +102,40 @@ let mockFrames: [SirenFrame] = [
     blueRed,
 //    pocket
 ]
+
+/*
+ 
+ {
+     switch index {
+     case 0:
+         self = .init(
+             sirenOne: newValue,
+             sirenTwo: self.sirenTwo,
+             sirenThree: self.sirenThree,
+             sirenFour: self.sirenFour
+         )
+     case 1:
+         self = .init(
+             sirenOne: self.sirenOne,
+             sirenTwo: newValue,
+             sirenThree: self.sirenThree,
+             sirenFour: self.sirenFour
+         )
+     case 2:
+         self = .init(
+             sirenOne: self.sirenOne,
+             sirenTwo: self.sirenTwo,
+             sirenThree: newValue,
+             sirenFour: self.sirenFour
+         )
+     case 3:
+         self = .init(
+             sirenOne: self.sirenOne,
+             sirenTwo: self.sirenTwo,
+             sirenThree: self.sirenThree,
+             sirenFour: newValue
+         )
+     default: break
+     }
+ }
+ */

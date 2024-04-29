@@ -10,7 +10,7 @@ import UIKit
 final class ReadySirenCollectionViewCell: UICollectionViewCell {
     static let reuseID = #function
     
-    let buttonGroup = RoundedButtonGroup<Selection>(offButton: false)
+    let buttonGroup = RoundedButtonGroup<Selection>(offButton: false, selectable: false)
     
     override init(frame: CGRect) {
         super.init(frame: frame)

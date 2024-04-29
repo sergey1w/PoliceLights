@@ -43,8 +43,7 @@ final class ReadySirenViewController: UIViewController {
         collectionView.backgroundColor = .clear
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.snap(to: self.view.safeAreaLayoutGuide, [.leading,.trailing,.bottom])
-        collectionView.snap(to: self.view.safeAreaLayoutGuide, [.top], constant: 8)
+        collectionView.snap(to: self.view.safeAreaLayoutGuide, [.leading,.trailing,.bottom, .top])
     }
 }
 
@@ -84,7 +83,6 @@ extension ReadySirenViewController: UICollectionViewDataSource {
     }
 }
 
-extension ReadySirenViewController: UICollectionViewDelegate {}
 extension ReadySirenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,

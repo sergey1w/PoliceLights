@@ -7,25 +7,60 @@
 
 import UIKit
 
-//final class GradientButton: RoundedButton {
-//    
-//    private let gradientLayer = CAGradientLayer.gradientLayer(in: .zero)
-//    
-//    init() {
-//        super.init(frame: .zero)
-//        setupUI()
-//    }
-//    
+class GradientButton: UIButton {
+    
+    private let gradientLayer = CAGradientLayer.gradientLayer(in: .zero)
+    
+    var customRect: CGRect?
+    
+    init() {
+        super.init(frame: .zero)
+        setupUI()
+    }
+    
 //    override func layoutSubviews() {
 //        super.layoutSubviews()
-//        gradientLayer.frame = bounds
+//        if let customRect {
+//            gradientLayer.frame = customRect
+//        } else {
+//            gradientLayer.frame = bounds
+//        }
 //    }
-//    
-//    private func setupUI() {
-//        layer.insertSublayer(gradientLayer, at: 0)
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
+    
+    override func layoutSublayers(of layer: CALayer) {
+        super.layoutSublayers(of: layer)
+        if let customRect {
+            gradientLayer.frame = customRect
+        } else {
+            gradientLayer.frame = bounds
+        }
+    }
+    
+    func setGradientRect(rect: CGRect) {
+        customRect = rect
+        gradientLayer.frame = rect
+    }
+    
+    func setSelected() {
+        tintColor = .Colors.gradientBegin
+        gradientLayer.isHidden = false
+    }
+    
+    func setGradient(on: Bool) {
+        if on { gradientLayer.isHidden = false }
+        else { gradientLayer.isHidden = true }
+    }
+    
+    func setNormal() {
+        tintColor = .Colors.white
+        gradientLayer.isHidden = true
+    }
+    
+    private func setupUI() {
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
