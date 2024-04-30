@@ -16,7 +16,6 @@ final class FramePickerView: UIView {
     private let lastFrameButton = RoundedButton()
     private let nextFrameButton = RoundedButton()
     private let firstFrameLabel = UILabel()
-//    private let secondFrameLabel = UILabel()
     // bottom stack
     private let bottomStackView = UIStackView()
     private let playButton = RoundedButton()
@@ -29,7 +28,6 @@ final class FramePickerView: UIView {
     
     func setLabels(f: String) {
         firstFrameLabel.text = f
-//        secondFrameLabel.text = s
     }
     
     private func setup() {
@@ -52,32 +50,20 @@ final class FramePickerView: UIView {
         playButton.setImage(.Icons.play1, for: .normal)
         addFrameButton.setImage(.Icons.plus, for: .normal)
         
-        playButton.addTarget(nil, action: #selector(FramePickerViewController.playPreview), for: .touchUpInside)
+        playButton.addTarget(nil, action: #selector(CreateSirenViewController.playPreview), for: .touchUpInside)
         addFrameButton.addTarget(nil, action: #selector(FramePickerViewController.addFrame), for: .touchUpInside)
     }
     
     private func setupLabels() {
-//        firstFrameLabel.text = "1"
         firstFrameLabel.textColor = .Colors.white
         firstFrameLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
-//        secondFrameLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
         firstFrameLabel.textAlignment = .center
-//        secondFrameLabel.text = "2"
         firstFrameLabel.layer.borderColor = Constants.borderColor
-//        secondFrameLabel.layer.borderColor = Constants.borderColor
-//        secondFrameLabel.layer.borderWidth = 1
         firstFrameLabel.layer.borderWidth = 1
-//        secondFrameLabel.textColor = .Colors.white
-//        secondFrameLabel.textAlignment = .center
         firstFrameLabel.layer.cornerRadius = Constants.cornerRadius
         firstFrameLabel.layer.backgroundColor = Constants.backgroundColor
         firstFrameLabel.layer.masksToBounds = true
         firstFrameLabel.layer.borderColor = Constants.borderColor
-        
-//        secondFrameLabel.layer.cornerRadius = Constants.cornerRadius
-//        secondFrameLabel.layer.backgroundColor = Constants.backgroundColor
-//        secondFrameLabel.layer.masksToBounds = true
-//        secondFrameLabel.layer.borderColor = Constants.borderColor
     }
     
     private func setupUI() {

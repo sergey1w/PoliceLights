@@ -57,15 +57,6 @@ final class FramePickerViewController: UIViewController {
         preview.setFrame(frame: frames[currentIndex])
     }
     
-    @objc func playPreview() {
-        let model = SirenModel(frames: frames, frequency: 3)
-//        let sound = 
-        let vc = SirenViewController(model: model, sound: nil)
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .crossDissolve
-        present(vc, animated: true)
-    }
-    
     private func setup() {
         preview.isUserInteractionEnabled = false
         view.addSubview(framePickerView)
@@ -87,101 +78,4 @@ final class FramePickerViewController: UIViewController {
         saveButton.bringSubviewToFront(saveButton.imageView ?? saveButton) // ios bug
         saveButton.setInsets(forContentPadding: .tuple((12,12,12,12)), imageTitlePadding: 8)
     }
-    
-    // TODO: Stackview
-    /// at the top picker
-    /// at the bottom buttons (play fullscreen SIrenView AND + add frame)
-    /// save button at the bottom of the view
-    /// current frame in the CreateController
 }
-
-
-
-/*
- //struct FrameSequence: Sequence {
- //    typealias Iterator = FrameIterator
- //
- //    func makeIterator() -> FrameIterator {
- //        FrameIterator()
- //    }
- //}
- //
- //struct FrameCollection: Collection {
- //    typealias Element = SirenFrame
- //    typealias Index = [Element].Index
- //
- //    private var frames: [SirenFrame] = []
- //
- //    var startIndex: Array<Element>.Index { frames.startIndex }
- //    var endIndex: Array<Element>.Index { frames.endIndex }
- //
- //    subscript(position: Array<Element>.Index) -> SirenFrame {
- //        get { frames[position] }
- //        set { frames[position] = newValue }
- //    }
- //
- //    func index(after i: Array<Element>.Index) -> Array<Element>.Index {
- //        frames.index(after: i)
- //    }
- //}
- //
- //extension FrameCollection: BidirectionalCollection {
- //    func index(before i: Array<Element>.Index) -> Array<Element>.Index {
- //        frames.index(before: i)
- //    }
- //}
-
- extension Array where Element == SirenFrame {
-     func makeIterator() -> FrameIterator {
-         return FrameIterator()
-     }
- }
-
- struct FrameIterator: IteratorProtocol {
-     typealias Element = SirenFrame
-     typealias Index = [Element].Index
-     
-     private var frames: [SirenFrame] = []
-     private var index: Index
-     
-     init() {
-         self.frames = []
-         self.index = frames.startIndex
-     }
-     
-     var count: Index {
-         frames.count
-     }
-     
-     var first: SirenFrame? {
-         frames.first
-     }
-     
-     var last: SirenFrame? {
-         frames.last
-     }
-     
-     subscript(_ i: Index) -> SirenFrame {
-         get { frames[i] }
-         set { frames[i] = newValue }
-     }
-     
-     mutating func next() -> SirenFrame? {
-         guard !self.frames.isEmpty else { return nil }
-         index = frames.index(after: index)
-         if index == frames.endIndex {
-             index = frames.startIndex
-         }
-         return frames[index]
-     }
-     
-     mutating func previous() -> SirenFrame? {
-         guard !self.frames.isEmpty else { return nil }
-         index = frames.index(before: index)
-         if index == frames.startIndex {
-             index = frames.endIndex
-         }
-         return frames[index]
-     }
- }
- */

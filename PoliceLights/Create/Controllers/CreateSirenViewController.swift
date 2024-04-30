@@ -31,10 +31,21 @@ final class CreateSirenViewController: UIViewController {
         fpsGroup.selection
     }
     
-//    private var currentFrame: SirenFrame {
-//        get { framePicker.frames[framePicker.currentIndex] }
-//        set { framePicker.setFrame(frame: newValue) }
-//    }
+    private var frames: [SirenFrame] {
+        framePicker.frames
+    }
+    
+    private var currentFrameIndex: Int {
+        framePicker.currentIndex
+    }
+    
+    private var currentFrame: SirenFrame {
+        get {
+            guard currentFrameIndex < frames.count else { return .init() }
+            return framePicker.frames[currentFrameIndex]
+        }
+        set { framePicker.setFrame(frame: newValue) }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,18 +62,19 @@ final class CreateSirenViewController: UIViewController {
         sectionsStackView.arrangedSubviews.forEach { view in
             (view as? GradientButton)?.setNormal()
         }
-        let iconWidth = sender.imageView?.bounds.width ?? Constants.defaultIconWidth
-        let titleWidth = sender.titleLabel?.bounds.width ?? sender.bounds.width - iconWidth - Constants.buttonIconSpacing
-        let rect = CGRect(
-            x: iconWidth + Constants.buttonIconSpacing,
-            y: sender.bounds.maxY - Constants.gradientLineHeight,
-            width: titleWidth,
-            height: Constants.gradientLineHeight
-        )
-        sender.setGradientRect(rect: rect)
+        sender.setGradientRect(rect: sender.underlineRect)
         sender.setSelected()
         self.section = section
         manageViews()
+    }
+    
+    @objc func playPreview() {
+        guard !frames.isEmpty else { return }
+        let model = SirenModel(frames: frames, frequency: fps ?? 1)
+        let vc = SirenViewController(model: model, sound: sound ?? nil)
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
     }
     
     private func manageViews() {
@@ -79,9 +91,7 @@ final class CreateSirenViewController: UIViewController {
         case .fps:
             fpsGroup.isHidden = false
         case .policeLights:
-            if framePicker.currentIndex < framePicker.frames.count {
-                sirensPicker.setFrame(frame: framePicker.frames[framePicker.currentIndex])
-            }
+            sirensPicker.setFrame(frame: currentFrame)
             sirensPicker.view.isHidden = false
         case .storyboard:
             framePicker.view.isHidden = false

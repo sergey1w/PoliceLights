@@ -75,7 +75,7 @@ final class RoundedButtonGroup<Selection>: UIView {
         if offButton {
             let offButton = makeButton("Off")
             offButton.tag = -1
-            offButton.addTarget(self, action: #selector(testmethod(sender:)), for: .touchUpInside)
+            offButton.addTarget(self, action: #selector(setSelection(sender:)), for: .touchUpInside)
             buttonStack.addArrangedSubview(offButton)
         }
         buttonStack.addArrangedSubviews(
@@ -83,13 +83,13 @@ final class RoundedButtonGroup<Selection>: UIView {
                 let strSelection = selection as? CustomStringConvertible
                 let button = makeButton(strSelection?.description ?? String(index + 1))
                 button.tag = index + 1
-                button.addTarget(self, action: #selector(testmethod(sender:)), for: .touchUpInside)
+                button.addTarget(self, action: #selector(setSelection(sender:)), for: .touchUpInside)
                 return button
             }
         )
     }
     
-    @objc private func testmethod(sender: RoundedButton) {
+    @objc private func setSelection(sender: RoundedButton) {
         let tag = sender.tag
         guard tag <= selections.count else { return }
         if tag < 0 {

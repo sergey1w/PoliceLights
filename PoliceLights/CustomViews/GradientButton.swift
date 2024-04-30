@@ -47,6 +47,16 @@ class GradientButton: UIButton {
         gradientLayer.isHidden = true
     }
     
+    var underlineRect: CGRect {
+        let rect = CGRect(
+            x: titleLabel?.frame.minX ?? 0,
+            y: bounds.maxY - 3,
+            width: titleLabel?.bounds.width ?? 0,
+            height: 3
+        )
+        return rect
+    }
+    
     private func setupUI() {
         layer.insertSublayer(gradientLayer, at: 0)
     }
