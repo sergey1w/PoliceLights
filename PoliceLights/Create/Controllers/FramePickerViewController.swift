@@ -58,7 +58,9 @@ final class FramePickerViewController: UIViewController {
     }
     
     @objc func playPreview() {
-        let vc = SirenViewController(model: .init(frames: frames, frequency: 3), sound: nil)
+        let model = SirenModel(frames: frames, frequency: 3)
+//        let sound = 
+        let vc = SirenViewController(model: model, sound: nil)
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true)

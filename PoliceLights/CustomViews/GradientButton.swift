@@ -18,15 +18,6 @@ class GradientButton: UIButton {
         setupUI()
     }
     
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        if let customRect {
-//            gradientLayer.frame = customRect
-//        } else {
-//            gradientLayer.frame = bounds
-//        }
-//    }
-    
     override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         if let customRect {

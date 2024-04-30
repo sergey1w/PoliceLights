@@ -66,30 +66,25 @@ final class CreateSirenViewController: UIViewController {
     }
     
     private func manageViews() {
-        switch section {
-        case .siren:
-            soundPlayer.isHidden = false
+        func hideAll() {
+            soundPlayer.isHidden = true
             fpsGroup.isHidden = true
             sirensPicker.view.isHidden = true
             framePicker.view.isHidden = true
+        }
+        hideAll()
+        switch section {
+        case .siren:
+            soundPlayer.isHidden = false
         case .fps:
             fpsGroup.isHidden = false
-            soundPlayer.isHidden = true
-            sirensPicker.view.isHidden = true
-            framePicker.view.isHidden = true
         case .policeLights:
             if framePicker.currentIndex < framePicker.frames.count {
                 sirensPicker.setFrame(frame: framePicker.frames[framePicker.currentIndex])
             }
             sirensPicker.view.isHidden = false
-            fpsGroup.isHidden = true
-            soundPlayer.isHidden = true
-            framePicker.view.isHidden = true
         case .storyboard:
             framePicker.view.isHidden = false
-            fpsGroup.isHidden = true
-            soundPlayer.isHidden = true
-            sirensPicker.view.isHidden = true
         }
     }
     
