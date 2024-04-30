@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23B92" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CreatedSiren" representedClassName="CreatedSiren" syncable="YES">
+        <attribute name="frequency" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="sound" optional="YES" attributeType="String" valueTransformerName=""/>
+        <relationship name="frames" toMany="YES" deletionRule="Nullify" destinationEntity="SirenFrame" inverseName="sirenModel" inverseEntity="SirenFrame"/>
+    </entity>
+    <entity name="SirenFrame" representedClassName="SirenFrame" syncable="YES">
+        <attribute name="sirenFour" optional="YES" attributeType="String"/>
+        <attribute name="sirenOne" optional="YES" attributeType="String"/>
+        <attribute name="sirenThree" optional="YES" attributeType="String"/>
+        <attribute name="sirenTwo" optional="YES" attributeType="String"/>
+        <relationship name="sirenModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreatedSiren" inverseName="frames" inverseEntity="CreatedSiren"/>
+    </entity>
+</model>

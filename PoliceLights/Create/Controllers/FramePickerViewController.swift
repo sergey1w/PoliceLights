@@ -13,7 +13,7 @@ final class FramePickerViewController: UIViewController {
     private let preview = SirensPreview()
     private let saveButton = RoundedButton()
     
-    private(set) var frames: [SirenFrame] = []
+    private(set) var frames: [SirenFrameModel] = []
     private(set) var currentIndex: Int = 0 {
         didSet {
             framePickerView.setLabels(f: currentIndex.description)
@@ -25,7 +25,7 @@ final class FramePickerViewController: UIViewController {
         setup()
     }
     
-    func setFrame(frame: SirenFrame) {
+    func setFrame(frame: SirenFrameModel) {
         guard currentIndex < frames.count else { return }
         frames[currentIndex] = frame
         preview.setFrame(frame: frames[currentIndex])
@@ -77,5 +77,6 @@ final class FramePickerViewController: UIViewController {
         saveButton.tintColor = .white
         saveButton.bringSubviewToFront(saveButton.imageView ?? saveButton) // ios bug
         saveButton.setInsets(forContentPadding: .tuple((12,12,12,12)), imageTitlePadding: 8)
+        saveButton.addTarget(parent, action: #selector(CreateSirenViewController.saveSiren), for: .touchUpInside)
     }
 }

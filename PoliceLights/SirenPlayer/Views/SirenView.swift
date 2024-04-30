@@ -9,7 +9,7 @@ import UIKit
 
 final class SirenView: UIView {
     
-    private(set) var model = SirenFrame()
+    private(set) var model = SirenFrameModel()
     private let sirenStackView = UIStackView()
     
     override init(frame: CGRect) {
@@ -17,7 +17,7 @@ final class SirenView: UIView {
         setupUI()
     }
     
-    func setFrame(frame: SirenFrame) {
+    func setFrame(frame: SirenFrameModel) {
         model = frame
         configureSirens(frame: frame)
     }
@@ -40,7 +40,7 @@ final class SirenView: UIView {
         configureSirens(frame: model)
     }
     
-    private func configureSirens(frame: SirenFrame) {
+    private func configureSirens(frame: SirenFrameModel) {
         frame.sirens.enumerated().forEach { index, siren in
             let imgView = sirenStackView.arrangedSubviews[index] as? UIImageView
             imgView?.image = siren?.image

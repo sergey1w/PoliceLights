@@ -27,11 +27,11 @@ final class CreateSirenViewController: UIViewController {
         soundPlayer.sound
     }
     
-    private var fps: Int? {
-        fpsGroup.selection
+    private var fps: Int {
+        fpsGroup.selection ?? 1
     }
     
-    private var frames: [SirenFrame] {
+    private var frames: [SirenFrameModel] {
         framePicker.frames
     }
     
@@ -39,7 +39,7 @@ final class CreateSirenViewController: UIViewController {
         framePicker.currentIndex
     }
     
-    private var currentFrame: SirenFrame {
+    private var currentFrame: SirenFrameModel {
         get {
             guard currentFrameIndex < frames.count else { return .init() }
             return framePicker.frames[currentFrameIndex]
@@ -70,11 +70,20 @@ final class CreateSirenViewController: UIViewController {
     
     @objc func playPreview() {
         guard !frames.isEmpty else { return }
-        let model = SirenModel(frames: frames, frequency: fps ?? 1)
+        let model = SirenModel(frames: frames, frequency: fps, sound: sound)
         let vc = SirenViewController(model: model, sound: sound ?? nil)
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true)
+    }
+    
+    @objc func saveSiren() {
+        let createdSiren = CreatedSiren(context: CoreDataManager.shared.mainContext)
+        createdSiren.name = UUID().uuidString
+        createdSiren.frequency = Int16(fps)
+        createdSiren.sound = sound?.rawValue
+        createdSiren.frames = NSSet(array: frames)
+        CoreDataManager.shared.saveContext()
     }
     
     private func manageViews() {

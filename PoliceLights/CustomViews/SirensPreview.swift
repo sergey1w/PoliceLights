@@ -11,7 +11,7 @@ final class SirensPreview: UIView {
     
     private let sirenStackView = UIStackView()
     
-    private(set) var sirenFrame = SirenFrame()
+    private(set) var sirenFrame = SirenFrameModel()
     
     private(set) var selectedIndex: Int?
     
@@ -20,7 +20,7 @@ final class SirensPreview: UIView {
         setup()
     }
     
-    func setFrame(frame: SirenFrame) {
+    func setFrame(frame: SirenFrameModel) {
         sirenFrame = frame
         for i in 0..<frame.sirens.count {
             let btn = sirenStackView.arrangedSubviews[i] as? UIButton

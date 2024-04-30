@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct SirenFrame {
+struct SirenFrameModel {
     let sirenOne: Siren?
     let sirenTwo: Siren?
     let sirenThree: Siren?
@@ -64,31 +64,31 @@ enum Siren: String, CaseIterable {
 
 extension Siren: HashFindable {}
 
-extension SirenFrame: Decodable {}
+extension SirenFrameModel: Decodable {}
 extension Siren: Decodable {}
 
-let redBlue = SirenFrame(
+let redBlue = SirenFrameModel(
     sirenOne: .red,
     sirenTwo: nil,
     sirenThree: nil,
     sirenFour: .blue
 )
 
-let blueRed = SirenFrame(
+let blueRed = SirenFrameModel(
     sirenOne: nil,
     sirenTwo: .red,
     sirenThree: .blue,
     sirenFour: nil
 )
 
-let pocket = SirenFrame(
+let pocket = SirenFrameModel(
     sirenOne: .orange,
     sirenTwo: .pink,
     sirenThree: .gray,
     sirenFour: .green
 )
 
-let empty = SirenFrame(
+let empty = SirenFrameModel(
     sirenOne: nil,
     sirenTwo: nil,
     sirenThree: nil,
@@ -96,7 +96,7 @@ let empty = SirenFrame(
 )
 
 
-let mockFrames: [SirenFrame] = [
+let mockFrames: [SirenFrameModel] = [
     redBlue,
     empty,
     blueRed,

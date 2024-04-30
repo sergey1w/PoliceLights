@@ -19,7 +19,7 @@ final class SirensPickerViewController: UIViewController {
         setup()
     }
     
-    func setFrame(frame: SirenFrame) {
+    func setFrame(frame: SirenFrameModel) {
         preview.setFrame(frame: frame)
 //        SirenFramesService.shared.currentFrame = preview.sirenFrame
     }

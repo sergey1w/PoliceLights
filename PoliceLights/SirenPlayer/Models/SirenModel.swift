@@ -8,8 +8,11 @@
 import Foundation
 
 struct SirenModel {
-    let frames: [SirenFrame]
+    let frames: [SirenFrameModel]
     let frequency: Int
+    let sound: SirenSound?
+    
+    var name: String?
 }
 
 enum SirenSound: String, CaseIterable {

@@ -40,6 +40,12 @@
 		A5562E762B9DF27600574446 /* RoundedButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5562E752B9DF27600574446 /* RoundedButtonGroup.swift */; };
 		A5562E782B9E537F00574446 /* SpecialSirenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5562E772B9E537F00574446 /* SpecialSirenController.swift */; };
 		A556D6332BAA371F00C72CC5 /* UIButton+setInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A556D6322BAA371F00C72CC5 /* UIButton+setInsets.swift */; };
+		A57D71F02BE175180035B0F7 /* SirensData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A57D71EE2BE175180035B0F7 /* SirensData.xcdatamodeld */; };
+		A57D71F22BE179580035B0F7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D71F12BE179580035B0F7 /* CoreDataManager.swift */; };
+		A57D71F72BE1797B0035B0F7 /* CreatedSiren+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D71F32BE1797B0035B0F7 /* CreatedSiren+CoreDataClass.swift */; };
+		A57D71F82BE1797B0035B0F7 /* CreatedSiren+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D71F42BE1797B0035B0F7 /* CreatedSiren+CoreDataProperties.swift */; };
+		A57D71F92BE1797B0035B0F7 /* SirenFrame+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D71F52BE1797B0035B0F7 /* SirenFrame+CoreDataClass.swift */; };
+		A57D71FA2BE1797B0035B0F7 /* SirenFrame+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D71F62BE1797B0035B0F7 /* SirenFrame+CoreDataProperties.swift */; };
 		A5BF56BA2BB0DFE200EFD44A /* SirenSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF56B92BB0DFE200EFD44A /* SirenSoundPlayer.swift */; };
 		A5D3C67B2BD703B5002FBCFA /* FramePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3C67A2BD703B5002FBCFA /* FramePickerViewController.swift */; };
 		A5D3C67D2BD81CF7002FBCFA /* FramePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3C67C2BD81CF7002FBCFA /* FramePickerView.swift */; };
@@ -49,7 +55,7 @@
 		A5DDE0732B948AA60042DA4B /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06D2B948AA60042DA4B /* UIApplicationExtension.swift */; };
 		A5DDE0742B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06E2B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift */; };
 		A5DDE0752B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE06F2B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift */; };
-		A5DDE0772B94B3FA0042DA4B /* SirenFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE0762B94B3FA0042DA4B /* SirenFrame.swift */; };
+		A5DDE0772B94B3FA0042DA4B /* SirenFrameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE0762B94B3FA0042DA4B /* SirenFrameModel.swift */; };
 		A5DDE0792B94B6860042DA4B /* SirenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDE0782B94B6860042DA4B /* SirenView.swift */; };
 		A5F7E0C02BB9C9BA000E2B10 /* SirensPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F7E0BF2BB9C9BA000E2B10 /* SirensPickerView.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +96,12 @@
 		A5562E752B9DF27600574446 /* RoundedButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonGroup.swift; sourceTree = "<group>"; };
 		A5562E772B9E537F00574446 /* SpecialSirenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialSirenController.swift; sourceTree = "<group>"; };
 		A556D6322BAA371F00C72CC5 /* UIButton+setInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setInsets.swift"; sourceTree = "<group>"; };
+		A57D71EF2BE175180035B0F7 /* SirensData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SirensData.xcdatamodel; sourceTree = "<group>"; };
+		A57D71F12BE179580035B0F7 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A57D71F32BE1797B0035B0F7 /* CreatedSiren+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatedSiren+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A57D71F42BE1797B0035B0F7 /* CreatedSiren+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatedSiren+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A57D71F52BE1797B0035B0F7 /* SirenFrame+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SirenFrame+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A57D71F62BE1797B0035B0F7 /* SirenFrame+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SirenFrame+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A5BF56B92BB0DFE200EFD44A /* SirenSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenSoundPlayer.swift; sourceTree = "<group>"; };
 		A5D3C67A2BD703B5002FBCFA /* FramePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramePickerViewController.swift; sourceTree = "<group>"; };
 		A5D3C67C2BD81CF7002FBCFA /* FramePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramePickerView.swift; sourceTree = "<group>"; };
@@ -99,7 +111,7 @@
 		A5DDE06D2B948AA60042DA4B /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		A5DDE06E2B948AA60042DA4B /* UIStackView+addArrangedSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+addArrangedSubviews.swift"; sourceTree = "<group>"; };
 		A5DDE06F2B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+UIEdgeInsets.swift"; sourceTree = "<group>"; };
-		A5DDE0762B94B3FA0042DA4B /* SirenFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenFrame.swift; sourceTree = "<group>"; };
+		A5DDE0762B94B3FA0042DA4B /* SirenFrameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenFrameModel.swift; sourceTree = "<group>"; };
 		A5DDE0782B94B6860042DA4B /* SirenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenView.swift; sourceTree = "<group>"; };
 		A5F7E0BF2BB9C9BA000E2B10 /* SirensPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirensPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +148,7 @@
 			children = (
 				A5562E642B9CBC2B00574446 /* AlignedCollectionViewFlowLayout.swift */,
 				A530D0BF2B89FDAA00E54E24 /* Application */,
+				A57D71FB2BE179980035B0F7 /* CoreData */,
 				A54F4D7E2B97990F00E2D286 /* Create */,
 				A530D0CA2B8A151900E54E24 /* CustomViews */,
 				A5DDE0692B948A720042DA4B /* Extensions */,
@@ -173,7 +186,7 @@
 		A530D0C42B89FE0700E54E24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A5DDE0762B94B3FA0042DA4B /* SirenFrame.swift */,
+				A5DDE0762B94B3FA0042DA4B /* SirenFrameModel.swift */,
 				A54F4D6A2B97695D00E2D286 /* SirenModel.swift */,
 			);
 			path = Models;
@@ -335,6 +348,19 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		A57D71FB2BE179980035B0F7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A57D71F32BE1797B0035B0F7 /* CreatedSiren+CoreDataClass.swift */,
+				A57D71F42BE1797B0035B0F7 /* CreatedSiren+CoreDataProperties.swift */,
+				A57D71F52BE1797B0035B0F7 /* SirenFrame+CoreDataClass.swift */,
+				A57D71F62BE1797B0035B0F7 /* SirenFrame+CoreDataProperties.swift */,
+				A57D71EE2BE175180035B0F7 /* SirensData.xcdatamodeld */,
+				A57D71F12BE179580035B0F7 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		A5DDE0692B948A720042DA4B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,9 +461,10 @@
 				A5562E762B9DF27600574446 /* RoundedButtonGroup.swift in Sources */,
 				A5562E742B9DE8F700574446 /* ReadySirensHeaderFooterView.swift in Sources */,
 				A5D3C67B2BD703B5002FBCFA /* FramePickerViewController.swift in Sources */,
+				A57D71F92BE1797B0035B0F7 /* SirenFrame+CoreDataClass.swift in Sources */,
 				A530D0C92B8A0C2100E54E24 /* CAGradientLayer+gradientLayer.swift in Sources */,
 				A53E907E2BC2C40B008CF1A8 /* SirensPickerViewController.swift in Sources */,
-				A5DDE0772B94B3FA0042DA4B /* SirenFrame.swift in Sources */,
+				A5DDE0772B94B3FA0042DA4B /* SirenFrameModel.swift in Sources */,
 				A5BF56BA2BB0DFE200EFD44A /* SirenSoundPlayer.swift in Sources */,
 				A54F4D802B97991A00E2D286 /* ReadySirenViewController.swift in Sources */,
 				A5562E652B9CBC2B00574446 /* AlignedCollectionViewFlowLayout.swift in Sources */,
@@ -452,6 +479,8 @@
 				A5562E6B2B9D0B9600574446 /* ReadySirensDataProvider.swift in Sources */,
 				A5DDE0752B948AA60042DA4B /* NSDirectionalEdgeInsets+UIEdgeInsets.swift in Sources */,
 				A5562E782B9E537F00574446 /* SpecialSirenController.swift in Sources */,
+				A57D71F72BE1797B0035B0F7 /* CreatedSiren+CoreDataClass.swift in Sources */,
+				A57D71FA2BE1797B0035B0F7 /* SirenFrame+CoreDataProperties.swift in Sources */,
 				A5562E5F2B9C8A6E00574446 /* TabSegmentedControl.swift in Sources */,
 				A530D0AE2B89F62500E54E24 /* SceneDelegate.swift in Sources */,
 				A5562E722B9D156A00574446 /* NSAtrributedString+attributedString.swift in Sources */,
@@ -461,8 +490,11 @@
 				A54F4D6B2B97695D00E2D286 /* SirenModel.swift in Sources */,
 				A556D6332BAA371F00C72CC5 /* UIButton+setInsets.swift in Sources */,
 				A53E90802BC2D232008CF1A8 /* SirensPreview.swift in Sources */,
+				A57D71F22BE179580035B0F7 /* CoreDataManager.swift in Sources */,
+				A57D71F82BE1797B0035B0F7 /* CreatedSiren+CoreDataProperties.swift in Sources */,
 				A5562E632B9CB7BF00574446 /* UIViewController+children.swift in Sources */,
 				A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */,
+				A57D71F02BE175180035B0F7 /* SirensData.xcdatamodeld in Sources */,
 				A53E90832BC334D6008CF1A8 /* HashFindable.swift in Sources */,
 				A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */,
 			);
@@ -685,6 +717,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A57D71EE2BE175180035B0F7 /* SirensData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A57D71EF2BE175180035B0F7 /* SirensData.xcdatamodel */,
+			);
+			currentVersion = A57D71EF2BE175180035B0F7 /* SirensData.xcdatamodel */;
+			path = SirensData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A530D0A02B89F62500E54E24 /* Project object */;
 }
