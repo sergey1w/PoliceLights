@@ -20,7 +20,6 @@ extension SirenFrame {
     @NSManaged public var sirenFour: String?
     @NSManaged public var sirenThree: String?
     @NSManaged public var sirenTwo: String?
-    @NSManaged public var sirenModel: CreatedSiren?
 
 }
 

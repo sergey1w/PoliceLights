@@ -22,7 +22,9 @@ final class CreatedSirenCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        preview.snap(to: self, [.leading,.trailing,.top,.bottom])
+        contentView.addSubview(preview)
+        preview.snap(to: self.contentView, [.leading,.trailing,.top,.bottom])
+        preview.isUserInteractionEnabled = false
     }
     
     required init?(coder: NSCoder) {

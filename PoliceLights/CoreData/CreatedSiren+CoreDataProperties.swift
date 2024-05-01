@@ -2,7 +2,7 @@
 //  CreatedSiren+CoreDataProperties.swift
 //  PoliceLights
 //
-//  Created by sergey on 30.04.2024.
+//  Created by sergey on 01.05.2024.
 //
 //
 
@@ -19,12 +19,30 @@ extension CreatedSiren {
     @NSManaged public var name: String?
     @NSManaged public var sound: String?
     @NSManaged public var frequency: Int16
-    @NSManaged public var frames: NSSet?
+    @NSManaged public var frames: NSOrderedSet?
 
 }
 
 // MARK: Generated accessors for frames
 extension CreatedSiren {
+
+    @objc(insertObject:inFramesAtIndex:)
+    @NSManaged public func insertIntoFrames(_ value: SirenFrame, at idx: Int)
+
+    @objc(removeObjectFromFramesAtIndex:)
+    @NSManaged public func removeFromFrames(at idx: Int)
+
+    @objc(insertFrames:atIndexes:)
+    @NSManaged public func insertIntoFrames(_ values: [SirenFrame], at indexes: NSIndexSet)
+
+    @objc(removeFramesAtIndexes:)
+    @NSManaged public func removeFromFrames(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInFramesAtIndex:withObject:)
+    @NSManaged public func replaceFrames(at idx: Int, with value: SirenFrame)
+
+    @objc(replaceFramesAtIndexes:withFrames:)
+    @NSManaged public func replaceFrames(at indexes: NSIndexSet, with values: [SirenFrame])
 
     @objc(addFramesObject:)
     @NSManaged public func addToFrames(_ value: SirenFrame)
@@ -33,10 +51,10 @@ extension CreatedSiren {
     @NSManaged public func removeFromFrames(_ value: SirenFrame)
 
     @objc(addFrames:)
-    @NSManaged public func addToFrames(_ values: NSSet)
+    @NSManaged public func addToFrames(_ values: NSOrderedSet)
 
     @objc(removeFrames:)
-    @NSManaged public func removeFromFrames(_ values: NSSet)
+    @NSManaged public func removeFromFrames(_ values: NSOrderedSet)
 
 }
 

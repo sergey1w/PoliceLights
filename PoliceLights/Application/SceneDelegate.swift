@@ -20,12 +20,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-//        let vc = HomeViewController()
-//        let nav = UINavigationController(rootViewController: vc)
-        window.rootViewController = TabBarViewController()
+        let vc = TabBarViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        window.rootViewController = nav
         window.layer.insertSublayer(backgroundLayer, at: 0)
         backgroundLayer.frame = window.bounds
         window.makeKeyAndVisible()
+        
+        UINavigationBar.appearance().titleTextAttributes = NSAttributedString.attributedString(
+            ".",
+            fontSize: 25,
+            lineHeight: 27
+        ).attributes(at: 0, effectiveRange: nil)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

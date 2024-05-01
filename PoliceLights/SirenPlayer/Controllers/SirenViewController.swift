@@ -14,13 +14,11 @@ final class SirenViewController: UIViewController {
     private var frameIndex = 0
     private var timer: Timer? = nil
     private let model: SirenModel
-    private let sound: SirenSound?
     
     private var audioPlayer: AVAudioPlayer?
     
-    init(model: SirenModel, sound: SirenSound?) {
+    init(model: SirenModel) {
         self.model = model
-        self.sound = sound
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -74,7 +72,7 @@ private extension SirenViewController {
     }
     
     func setupAudioPlayer() {
-        if let soundURL = sound?.audioURL {
+        if let soundURL = model.sound?.audioURL {
             do {
                 self.audioPlayer = try .init(contentsOf: soundURL)
                 self.audioPlayer?.numberOfLoops = -1

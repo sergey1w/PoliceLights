@@ -22,7 +22,13 @@ final class CreatedSirensViewController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     private func setupUI() {
+        title = "Created"
         let layout = AlignedCollectionViewFlowLayout(horizontalAlignment: .leading, verticalAlignment: .bottom)
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.minimumInteritemSpacing = 32
@@ -30,7 +36,7 @@ final class CreatedSirensViewController: UIViewController {
         layout.sectionInset.top = 16
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
-//        collectionView.delegate = self
+        collectionView.delegate = self
         collectionView.register(
             CreatedSirenCollectionViewCell.self,
             forCellWithReuseIdentifier: CreatedSirenCollectionViewCell.reuseID
@@ -86,4 +92,14 @@ extension CreatedSirensViewController: UICollectionViewDataSource {
 //        header.setDelegate(self)
 //        return header
 //    }
+}
+
+extension CreatedSirensViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = sirens[indexPath.item]
+        let vc = SirenViewController(model: item)
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
+    }
 }

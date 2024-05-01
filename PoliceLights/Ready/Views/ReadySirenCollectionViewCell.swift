@@ -18,8 +18,8 @@ final class ReadySirenCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        addSubview(buttonGroup)
-        buttonGroup.snap(to: self, [.leading,.trailing,.top,.bottom])
+        contentView.addSubview(buttonGroup)
+        buttonGroup.snap(to: self.contentView, [.leading,.trailing,.top,.bottom])
     }
     
     

@@ -109,7 +109,7 @@ extension ReadySirenViewController: RoundedButtonGroupDelegate {
             let vc: UIViewController
             switch readySiren {
             case .siren(let sirenModel):
-                vc = SirenViewController(model: sirenModel, sound: sirenSound)
+                vc = SirenViewController(model: sirenModel)
             case .special(let specialSirenModel):
                 vc = SpecialSirenController(model: specialSirenModel, sound: sirenSound)
             }

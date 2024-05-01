@@ -23,6 +23,14 @@ final class CreateSirenViewController: UIViewController {
     
     private(set) var section: Section = .siren
     
+    var model: SirenModel {
+        SirenModel(
+            frames: frames,
+            frequency: fps,
+            sound: sound
+        )
+    }
+    
     private var sound: SirenSound? {
         soundPlayer.sound
     }
@@ -71,18 +79,14 @@ final class CreateSirenViewController: UIViewController {
     @objc func playPreview() {
         guard !frames.isEmpty else { return }
         let model = SirenModel(frames: frames, frequency: fps, sound: sound)
-        let vc = SirenViewController(model: model, sound: sound ?? nil)
+        let vc = SirenViewController(model: model)
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true)
     }
     
     @objc func saveSiren() {
-        let createdSiren = CreatedSiren(context: CoreDataManager.shared.mainContext)
-        createdSiren.name = UUID().uuidString
-        createdSiren.frequency = Int16(fps)
-        createdSiren.sound = sound?.rawValue
-        createdSiren.frames = NSSet(array: frames)
+        model.mapToEntityInContext(CoreDataManager.shared.mainContext)
         CoreDataManager.shared.saveContext()
     }
     

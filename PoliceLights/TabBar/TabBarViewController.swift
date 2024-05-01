@@ -13,10 +13,16 @@ final class TabBarViewController: UIViewController {
     
     private let createController = CreateSirenViewController()
     private let readyController = ReadySirenViewController()
+    private let createdSirensButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
     
     private func setup() {
@@ -25,25 +31,41 @@ final class TabBarViewController: UIViewController {
         add(readyController)
         setupUI()
     }
+    
+    @objc func openCreatedSirens() {
+        let createdSirens = CreatedSirensService().getSirens()
+        let vc = CreatedSirensViewController(sirens: createdSirens)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension TabBarViewController: TabSegmentedControlDelegate {
     func setCreateTab() {
         readyController.view.isHidden = true
         createController.view.isHidden = false
+        createdSirensButton.isHidden = false
     }
     
     func setReadyTab() {
         readyController.view.isHidden = false
         createController.view.isHidden = true
+        createdSirensButton.isHidden = true
     }
 }
 
 private extension TabBarViewController {
     func setupUI() {
         self.view.addSubview(tabControl)
+        self.view.addSubview(createdSirensButton)
         makeConstraints()
         tabControl.setReadyTab()
+        setupCreatedSirensButton()
+    }
+    
+    func setupCreatedSirensButton() {
+        let str = NSAttributedString.attributedString("Created", fontSize: 17, lineHeight: 20)
+        createdSirensButton.setAttributedTitle(str, for: .normal)
+        createdSirensButton.addTarget(self, action: #selector(openCreatedSirens), for: .touchUpInside)
     }
     
     func makeConstraints() {
@@ -59,5 +81,8 @@ private extension TabBarViewController {
         
         readyController.view.snap(to: self.view.safeAreaLayoutGuide, [.leading,.bottom,.trailing])
         NSLayoutConstraint.snap([tabControl.bottomAnchor], [readyController.view.topAnchor],constants: [-8])
+        
+        createdSirensButton.snap(to: self.view.safeAreaLayoutGuide, [.top], constant: 16)
+        createdSirensButton.snap(to: self.view.safeAreaLayoutGuide, [.trailing])
     }
 }
