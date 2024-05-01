@@ -41,11 +41,6 @@ final class CreatedSirensViewController: UIViewController {
             CreatedSirenCollectionViewCell.self,
             forCellWithReuseIdentifier: CreatedSirenCollectionViewCell.reuseID
         )
-//        collectionView.register(
-//            ReadySirensHeaderFooterView.self,
-//            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-//            withReuseIdentifier: headerViewReuseID
-//        )
         view.addSubview(collectionView)
         collectionView.backgroundColor = .clear
         collectionView.showsVerticalScrollIndicator = false
@@ -73,25 +68,8 @@ extension CreatedSirensViewController: UICollectionViewDataSource {
         }
         let model = sirens[indexPath.item]
         cell.configure(model: model)
-//        cell.setDelegate(self)
         return cell
     }
-    
-//    func collectionView(
-//        _ collectionView: UICollectionView,
-//        viewForSupplementaryElementOfKind kind: String,
-//        at indexPath: IndexPath
-//    ) -> UICollectionReusableView {
-//        guard let header = collectionView.dequeueReusableSupplementaryView(
-//            ofKind: kind,
-//            withReuseIdentifier: headerViewReuseID,
-//            for: indexPath
-//        ) as? ReadySirensHeaderFooterView else {
-//            return .init()
-//        }
-//        header.setDelegate(self)
-//        return header
-//    }
 }
 
 extension CreatedSirensViewController: UICollectionViewDelegate {

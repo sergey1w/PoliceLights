@@ -19,7 +19,7 @@ final class PreviewLabel: UIView {
         previewIcon.tintColor = .Colors.white
         let previewLabel = UILabel()
         previewLabel.text = "PREVIEW"
-        previewLabel.font = .systemFont(ofSize: 19, weight: .medium)
+        previewLabel.font = .title2
         previewLabel.setContentHuggingPriority(.init(1), for: .horizontal)
         previewLabel.textColor = .Colors.white
         

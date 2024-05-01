@@ -15,4 +15,11 @@ extension UIFont {
     static let subtitle1 = systemFont(ofSize: 17, weight: .medium)
     static let body1 = systemFont(ofSize: 17, weight: .regular)
     static let button = systemFont(ofSize: 17, weight: .medium)
+    
+    
+    enum TextAttributes  {
+        static let H1: [NSAttributedString.Key : Any] = [
+            .font: UIFont.H1
+        ]
+    }
 }

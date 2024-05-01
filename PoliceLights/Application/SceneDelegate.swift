@@ -27,11 +27,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         backgroundLayer.frame = window.bounds
         window.makeKeyAndVisible()
         
-        UINavigationBar.appearance().titleTextAttributes = NSAttributedString.attributedString(
-            ".",
-            fontSize: 25,
-            lineHeight: 27
-        ).attributes(at: 0, effectiveRange: nil)
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font: UIFont.H2,
+            .foregroundColor: UIColor.Colors.white
+        ]
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().barStyle = .black
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

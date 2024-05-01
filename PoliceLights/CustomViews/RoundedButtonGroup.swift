@@ -64,11 +64,7 @@ final class RoundedButtonGroup<Selection>: UIView {
     
     func configure(title: String, selections: [Selection]) {
         if !titleHidden {
-            label.attributedText = NSAttributedString.attributedString(
-                title,
-                fontSize: 19,
-                lineHeight: 24
-            )
+            label.attributedText = .attributedString(title, font: .title2, color: .Colors.white)
         }
         self.selections = selections
         buttonStack.removeArrangedSubviews()
@@ -108,7 +104,10 @@ final class RoundedButtonGroup<Selection>: UIView {
     
     private func makeButton(_ title: String) -> RoundedButton {
         let btn = RoundedButton()
-        btn.setTitle(title, for: .normal)
+        btn.setAttributedTitle(
+            .attributedString(title, font: .title2, color: .Colors.white),
+            for: .normal
+        )
         btn.showBorder()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.widthAnchor.constraint(equalToConstant: 48).isActive = true
