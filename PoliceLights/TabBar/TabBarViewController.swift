@@ -33,7 +33,7 @@ final class TabBarViewController: UIViewController {
     }
     
     @objc func openCreatedSirens() {
-        let createdSirens = CreatedSirensService().getSirens()
+        let createdSirens = CreatedSirensService.shared.getSirens()
         let vc = CreatedSirensViewController(sirens: createdSirens)
         navigationController?.pushViewController(vc, animated: false)
     }

@@ -26,7 +26,7 @@ extension SirenModel: EntityModelMapProtocol {
             frames: frames ?? [],
             frequency: Int(entity.frequency),
             sound: SirenSound(rawValue: entity.sound ?? ""),
-            name: UUID().uuidString
+            name: entity.name
         )
     }
     

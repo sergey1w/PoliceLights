@@ -10,7 +10,7 @@ import UIKit
 final class CreatedSirensViewController: UIViewController {
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
-    private let sirens: [SirenModel]
+    private(set) var sirens: [SirenModel]
     
     init(sirens: [SirenModel]) {
         self.sirens = sirens
@@ -31,9 +31,9 @@ final class CreatedSirensViewController: UIViewController {
         title = "Created"
         let layout = AlignedCollectionViewFlowLayout(horizontalAlignment: .leading, verticalAlignment: .bottom)
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.minimumInteritemSpacing = 32
-        layout.minimumLineSpacing = 16
-        layout.sectionInset.top = 16
+//        layout.minimumInteritemSpacing = 0
+//        layout.minimumLineSpacing = 16
+//        layout.sectionInset.top = 16
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -68,6 +68,11 @@ extension CreatedSirensViewController: UICollectionViewDataSource {
         }
         let model = sirens[indexPath.item]
         cell.configure(model: model)
+        cell.onDeleteSiren = { [weak self] in
+            CreatedSirensService.shared.deleteSiren(model.name ?? "")
+            self?.sirens.remove(at: indexPath.item)
+            self?.collectionView.reloadSections([0])
+        }
         return cell
     }
 }

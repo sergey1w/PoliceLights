@@ -8,24 +8,22 @@
 import Foundation
 
 extension RoundedButton {
-    enum ActionType {
-        case save
-        case delete
+    static func saveButton() -> RoundedButton {
+        let btn = RoundedButton()
+        btn.setTitle("Save", for: .normal)
+        btn.setSelected()
+        btn.setImage(.Icons.tickSquare, for: .normal)
+        btn.tintColor = .white
+        btn.bringSubviewToFront(btn.imageView ?? btn) // ios bug
+        btn.setInsets(forContentPadding: .tuple((12,12,12,12)), imageTitlePadding: 8)
+        return btn
     }
     
-    func makeButton(type: ActionType) {
-        switch type {
-        case .save:
-            setTitle("Save", for: .normal)
-            setSelected()
-            setImage(.Icons.tickSquare, for: .normal)
-            tintColor = .white
-            bringSubviewToFront(imageView ?? self) // ios bug
-            setInsets(forContentPadding: .tuple((12,12,12,12)), imageTitlePadding: 8)
-        case .delete:
-            setTitle("Delete", for: .normal)
-            setImage(.Icons.delete, for: .normal)
-            setInsets(forContentPadding: .tuple((12,12,12,12)), imageTitlePadding: 8)
-        }
+    static func deleteButton() -> RoundedButton {
+        let btn = RoundedButton()
+        btn.setTitle("Delete", for: .normal)
+        btn.setImage(.Icons.delete, for: .normal)
+        btn.setInsets(forContentPadding: .tuple((12,12,12,12)), imageTitlePadding: 8)
+        return btn
     }
 }

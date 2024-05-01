@@ -12,11 +12,13 @@ final class CreatedSirenCollectionViewCell: UICollectionViewCell {
     
     private let nameLabel = UILabel()
     private let preview: SirensPreview
+    private let deleteButton = RoundedButton.deleteButton()
+    var onDeleteSiren: (() -> Void)?
     
     override init(frame: CGRect) {
         self.preview = SirensPreview(topView: nameLabel)
         super.init(frame: frame)
-        setupUI()
+        setup()
     }
     
     func configure(model: SirenModel) {
@@ -24,11 +26,23 @@ final class CreatedSirenCollectionViewCell: UICollectionViewCell {
         preview.setFrame(frame: model.frames.first ?? .init())
     }
     
-    private func setupUI() {
-        contentView.addSubview(preview)
-        preview.snap(to: self.contentView, [.leading,.trailing,.top,.bottom])
+    @objc private func deleteCreatedSiren() {
+        onDeleteSiren?()
+    }
+    
+    private func setup() {
         preview.isUserInteractionEnabled = false
         nameLabel.textColor = .white
+        deleteButton.addTarget(self, action: #selector(deleteCreatedSiren), for: .touchUpInside)
+        setupUI()
+    }
+    
+    private func setupUI() {
+        contentView.addSubview(preview)
+        contentView.addSubview(deleteButton)
+        preview.snap(to: self.contentView, [.leading,.top,.bottom])
+        deleteButton.snap(to: self.contentView, [.trailing,.bottom])
+        NSLayoutConstraint.snap([preview.trailingAnchor], [deleteButton.leadingAnchor], constants: [-8])
     }
     
     required init?(coder: NSCoder) {

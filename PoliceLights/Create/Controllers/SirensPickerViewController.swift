@@ -11,7 +11,7 @@ final class SirensPickerViewController: UIViewController {
     
     private let pickerView = SirensPickerView(frame: .zero)
     private let preview = SirensPreview(topView: PreviewLabel())
-    private let deleteButton = RoundedButton()
+    private let deleteButton = RoundedButton.deleteButton()
     weak var framePicker: FramePickerViewController?
     
     override func viewDidLoad() {
@@ -30,7 +30,6 @@ final class SirensPickerViewController: UIViewController {
     
     private func setup() {
         pickerView.delegate = self
-        deleteButton.makeButton(type: .delete)
         deleteButton.addTarget(self, action: #selector(deleteSiren(sender:)), for: .touchUpInside)
         setupUI()
     }

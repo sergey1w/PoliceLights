@@ -11,8 +11,8 @@ final class FramePickerViewController: UIViewController {
     
     private let framePickerView = FramePickerView(frame: .zero)
     private let preview = SirensPreview(topView: PreviewLabel())
-    private let deleteFrameButton = RoundedButton()
-    private let saveButton = RoundedButton()
+    private let deleteFrameButton = RoundedButton.deleteButton()
+    private let saveButton = RoundedButton.saveButton()
     
     private(set) var frames: [SirenFrameModel] = []
     private(set) var currentIndex: Int = 0 {
@@ -80,8 +80,6 @@ final class FramePickerViewController: UIViewController {
     }
     
     private func setupButtons() {
-        saveButton.makeButton(type: .save)
-        deleteFrameButton.makeButton(type: .delete)
         deleteFrameButton.addTarget(self, action: #selector(deleteFrame), for: .touchUpInside)
         saveButton.addTarget(parent, action: #selector(CreateSirenViewController.saveSiren), for: .touchUpInside)
     }
