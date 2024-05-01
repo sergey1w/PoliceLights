@@ -15,8 +15,11 @@ final class SirensPreview: UIView {
     
     private(set) var selectedIndex: Int?
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    private let topView: UIView
+    
+    init(topView: UIView) {
+        self.topView = topView
+        super.init(frame: .zero)
         setup()
     }
     
@@ -60,13 +63,12 @@ extension SirensPreview {
     }
     
     private func setupUI() {
-        let titleStack = makeTitleStack()
-        addSubview(titleStack)
+        addSubview(topView)
         addSubview(sirenStackView)
         
-        titleStack.snap(to: self, [.leading,.top])
+        topView.snap(to: self, [.leading,.top,.trailing])
         sirenStackView.snap(to: self, [.leading,.bottom,.trailing])
-        NSLayoutConstraint.snap([titleStack.bottomAnchor], [sirenStackView.topAnchor], constants: [-8])
+        NSLayoutConstraint.snap([topView.bottomAnchor], [sirenStackView.topAnchor], constants: [-8])
         setupSirenStackView()
     }
     
@@ -83,23 +85,6 @@ extension SirensPreview {
             return button
         }
         sirenStackView.addArrangedSubviews(sirens)
-    }
-    
-    private func makeTitleStack() -> UIView {
-        let previewIcon = UIImageView(image: UIImage.Icons.image2)
-        previewIcon.tintColor = .Colors.white
-        let previewLabel = UILabel()
-        previewLabel.text = "PREVIEW"
-        previewLabel.font = .systemFont(ofSize: 19, weight: .medium)
-        previewLabel.setContentHuggingPriority(.init(1), for: .horizontal)
-        previewLabel.textColor = .Colors.white
-        
-        let titleStack = UIStackView(arrangedSubviews: [previewIcon, previewLabel])
-        titleStack.axis = .horizontal
-        titleStack.distribution = .fill
-        titleStack.spacing = 8
-        titleStack.alignment = .bottom
-        return titleStack
     }
     
     private func makeSirenButton() -> UIButton {

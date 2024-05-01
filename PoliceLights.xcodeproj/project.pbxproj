@@ -52,6 +52,7 @@
 		A57D722B2BE248970035B0F7 /* CreatedSiren+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D72292BE248970035B0F7 /* CreatedSiren+CoreDataClass.swift */; };
 		A57D722C2BE248970035B0F7 /* CreatedSiren+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D722A2BE248970035B0F7 /* CreatedSiren+CoreDataProperties.swift */; };
 		A57D722E2BE249F70035B0F7 /* CreatedSirensDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D722D2BE249F70035B0F7 /* CreatedSirensDataProvider.swift */; };
+		A57D72302BE24D090035B0F7 /* PreviewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D722F2BE24D090035B0F7 /* PreviewLabel.swift */; };
 		A5BF56BA2BB0DFE200EFD44A /* SirenSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF56B92BB0DFE200EFD44A /* SirenSoundPlayer.swift */; };
 		A5D3C67B2BD703B5002FBCFA /* FramePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3C67A2BD703B5002FBCFA /* FramePickerViewController.swift */; };
 		A5D3C67D2BD81CF7002FBCFA /* FramePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3C67C2BD81CF7002FBCFA /* FramePickerView.swift */; };
@@ -114,6 +115,7 @@
 		A57D72292BE248970035B0F7 /* CreatedSiren+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatedSiren+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A57D722A2BE248970035B0F7 /* CreatedSiren+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatedSiren+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A57D722D2BE249F70035B0F7 /* CreatedSirensDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedSirensDataProvider.swift; sourceTree = "<group>"; };
+		A57D722F2BE24D090035B0F7 /* PreviewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLabel.swift; sourceTree = "<group>"; };
 		A5BF56B92BB0DFE200EFD44A /* SirenSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenSoundPlayer.swift; sourceTree = "<group>"; };
 		A5D3C67A2BD703B5002FBCFA /* FramePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramePickerViewController.swift; sourceTree = "<group>"; };
 		A5D3C67C2BD81CF7002FBCFA /* FramePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramePickerView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				A5562E752B9DF27600574446 /* RoundedButtonGroup.swift */,
 				A53E907F2BC2D232008CF1A8 /* SirensPreview.swift */,
 				A5562E5E2B9C8A6E00574446 /* TabSegmentedControl.swift */,
+				A57D722F2BE24D090035B0F7 /* PreviewLabel.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54F4D882B97994900E2D286 /* CreateSirenViewController.swift in Sources */,
+				A57D72302BE24D090035B0F7 /* PreviewLabel.swift in Sources */,
 				A5F7E0C02BB9C9BA000E2B10 /* SirensPickerView.swift in Sources */,
 				A530D0D02B8A66D400E54E24 /* BackgroundLayer.swift in Sources */,
 				A5562E6D2B9D0DB100574446 /* ReadySirenModel.swift in Sources */,

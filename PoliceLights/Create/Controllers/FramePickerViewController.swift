@@ -10,7 +10,7 @@ import UIKit
 final class FramePickerViewController: UIViewController {
     
     private let framePickerView = FramePickerView(frame: .zero)
-    private let preview = SirensPreview()
+    private let preview = SirensPreview(topView: PreviewLabel())
     private let saveButton = RoundedButton()
     
     private(set) var frames: [SirenFrameModel] = []

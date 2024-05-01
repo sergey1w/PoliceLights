@@ -10,7 +10,7 @@ import UIKit
 final class SirensPickerViewController: UIViewController {
     
     private let pickerView = SirensPickerView(frame: .zero)
-    private let preview = SirensPreview()
+    private let preview = SirensPreview(topView: PreviewLabel())
     private let deleteButton = RoundedButton()
     weak var framePicker: FramePickerViewController?
     
