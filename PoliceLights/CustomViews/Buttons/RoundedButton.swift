@@ -9,22 +9,10 @@ import UIKit
 
 final class RoundedButton: GradientButton {
     
-//    private let gradientLayer = CAGradientLayer.gradientLayer(in: .zero)
-    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        setupUI()
-//    }
-    
     override init() {
         super.init()
         setupUI()
     }
-    
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        gradientLayer.frame = bounds
-//    }
     
     override func setTitle(_ title: String?, for state: UIControl.State) {
         guard let title = title else { return }
@@ -36,15 +24,7 @@ final class RoundedButton: GradientButton {
         )
         setAttributedTitle(attributedTitle, for: state)
     }
-    
-//    func setSelected() {
-//        gradientLayer.isHidden = false
-//    }
-    
-//    func setNormal() {
-//        gradientLayer.isHidden = true
-//    }
-    
+
     func hideBorder() {
         layer.borderWidth = 0
     }
@@ -78,7 +58,6 @@ private extension RoundedButton {
         layer.cornerRadius = Constants.cornerRadius
         layer.backgroundColor = Constants.backgroundColor
         layer.masksToBounds = true
-//        layer.insertSublayer(gradientLayer, at: 0)
         layer.borderColor = Constants.borderColor
         setNormal()
         hideBorder()

@@ -86,6 +86,7 @@ final class CreateSirenViewController: UIViewController {
     }
     
     @objc func saveSiren() {
+        guard !model.frames.isEmpty else { return }
         model.mapToEntityInContext(CoreDataManager.shared.mainContext)
         CoreDataManager.shared.saveContext()
     }

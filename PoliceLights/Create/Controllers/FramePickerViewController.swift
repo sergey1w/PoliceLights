@@ -11,6 +11,7 @@ final class FramePickerViewController: UIViewController {
     
     private let framePickerView = FramePickerView(frame: .zero)
     private let preview = SirensPreview(topView: PreviewLabel())
+    private let deleteFrameButton = RoundedButton()
     private let saveButton = RoundedButton()
     
     private(set) var frames: [SirenFrameModel] = []
@@ -37,9 +38,9 @@ final class FramePickerViewController: UIViewController {
         currentIndex = 0
     }
     @objc func prevFrame() {
-        guard currentIndex - 1 >= frames.startIndex else { return }
-        preview.setFrame(frame: frames[currentIndex - 1])
-        currentIndex = currentIndex - 1
+        guard !frames.isEmpty else { return }
+        currentIndex = max(0, currentIndex - 1)
+        preview.setFrame(frame: frames[currentIndex])
     }
     @objc func lastFrame() {
         guard let frame = frames.last else { return }
@@ -47,36 +48,60 @@ final class FramePickerViewController: UIViewController {
         currentIndex = frames.count - 1
     }
     @objc func nextFrame() {
-        guard currentIndex + 1 < frames.endIndex else { return }
-        preview.setFrame(frame: frames[currentIndex + 1])
-        currentIndex += 1
+        guard !frames.isEmpty else { return }
+        currentIndex = min(frames.count - 1, currentIndex + 1)
+        preview.setFrame(frame: frames[currentIndex])
     }
     @objc func addFrame() {
         frames.append(.init())
         currentIndex = frames.count - 1
         preview.setFrame(frame: frames[currentIndex])
     }
+    @objc func deleteFrame() {
+        guard currentIndex < frames.count else { return }
+        frames.remove(at: currentIndex)
+        currentIndex = max(0, currentIndex - 1)
+        if frames.isEmpty {
+            preview.setFrame(frame: .init())
+            framePickerView.setLabels(f: "")
+        } else {
+            preview.setFrame(frame: frames[currentIndex])
+        }
+    }
     
     private func setup() {
-        preview.isUserInteractionEnabled = false
         view.addSubview(framePickerView)
         view.addSubview(preview)
         view.addSubview(saveButton)
-        setupSaveButton()
+        view.addSubview(deleteFrameButton)
+        preview.isUserInteractionEnabled = false
+        setupButtons()
+        setupUI()
+    }
+    
+    private func setupButtons() {
+        saveButton.makeButton(type: .save)
+        deleteFrameButton.makeButton(type: .delete)
+        deleteFrameButton.addTarget(self, action: #selector(deleteFrame), for: .touchUpInside)
+        saveButton.addTarget(parent, action: #selector(CreateSirenViewController.saveSiren), for: .touchUpInside)
+    }
+    
+    private func setupUI() {
         framePickerView.snap(to: view.safeAreaLayoutGuide, [.trailing,.top])
         preview.snap(to: view.safeAreaLayoutGuide, [.leading,.bottom])
         saveButton.snap(to: view.safeAreaLayoutGuide, [.bottom,.trailing])
         saveButton.widthAnchor.constraint(equalToConstant: 127).isActive = true
         NSLayoutConstraint.snap([saveButton.leadingAnchor], [preview.trailingAnchor], constants: [16])
-    }
-    
-    private func setupSaveButton() {
-        saveButton.setTitle("Save", for: .normal)
-        saveButton.setSelected()
-        saveButton.setImage(.Icons.tickSquare, for: .normal)
-        saveButton.tintColor = .white
-        saveButton.bringSubviewToFront(saveButton.imageView ?? saveButton) // ios bug
-        saveButton.setInsets(forContentPadding: .tuple((12,12,12,12)), imageTitlePadding: 8)
-        saveButton.addTarget(parent, action: #selector(CreateSirenViewController.saveSiren), for: .touchUpInside)
+        deleteFrameButton.snap(to: view.safeAreaLayoutGuide, [.trailing])
+        deleteFrameButton.widthAnchor.constraint(equalToConstant: 127).isActive = true
+        NSLayoutConstraint.snap(
+            [deleteFrameButton.leadingAnchor], [preview.trailingAnchor],
+            constants: [16]
+        )
+        NSLayoutConstraint.snap(
+            [deleteFrameButton.bottomAnchor],
+            [saveButton.topAnchor],
+            constants: [-8]
+        )
     }
 }

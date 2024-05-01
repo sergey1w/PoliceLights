@@ -21,17 +21,16 @@ final class SirensPickerViewController: UIViewController {
     
     func setFrame(frame: SirenFrameModel) {
         preview.setFrame(frame: frame)
-//        SirenFramesService.shared.currentFrame = preview.sirenFrame
     }
     
     @objc func deleteSiren(sender: UIButton) {
         preview.deleteSiren()
         framePicker?.setFrame(frame: preview.sirenFrame)
-//        SirenFramesService.shared.currentFrame = preview.sirenFrame
     }
     
     private func setup() {
         pickerView.delegate = self
+        deleteButton.makeButton(type: .delete)
         deleteButton.addTarget(self, action: #selector(deleteSiren(sender:)), for: .touchUpInside)
         setupUI()
     }
@@ -40,18 +39,11 @@ final class SirensPickerViewController: UIViewController {
         view.addSubview(pickerView)
         view.addSubview(preview)
         view.addSubview(deleteButton)
-        setupDeleteButton()
         deleteButton.snap(to: view.safeAreaLayoutGuide, [.bottom,.trailing])
         NSLayoutConstraint.snap([deleteButton.leadingAnchor], [preview.trailingAnchor], constants: [16])
         pickerView.snap(to: view.safeAreaLayoutGuide, [.leading,.top,.trailing])
         preview.snap(to: view.safeAreaLayoutGuide, [.leading,.bottom])
         deleteButton.widthAnchor.constraint(equalToConstant: 127).isActive = true
-    }
-    
-    private func setupDeleteButton() {
-        deleteButton.setTitle("Delete", for: .normal)
-        deleteButton.setImage(.Icons.delete, for: .normal)
-        deleteButton.setInsets(forContentPadding: .tuple((12,12,12,12)), imageTitlePadding: 8)
     }
 }
 
@@ -59,6 +51,5 @@ extension SirensPickerViewController: SirensPickerViewDelegate {
     func didPickSiren(siren: Siren) {
         preview.setSiren(siren: siren)
         framePicker?.setFrame(frame: preview.sirenFrame)
-//        SirenFramesService.shared.currentFrame = preview.sirenFrame
     }
 }
