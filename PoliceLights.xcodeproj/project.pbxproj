@@ -54,6 +54,7 @@
 		A57D722E2BE249F70035B0F7 /* CreatedSirensDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D722D2BE249F70035B0F7 /* CreatedSirensDataProvider.swift */; };
 		A57D72302BE24D090035B0F7 /* PreviewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D722F2BE24D090035B0F7 /* PreviewLabel.swift */; };
 		A57D72322BE288040035B0F7 /* RoundedButton+makeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D72312BE288040035B0F7 /* RoundedButton+makeButton.swift */; };
+		A57D72352BE296F30035B0F7 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D72342BE296F30035B0F7 /* UIFont.swift */; };
 		A5BF56BA2BB0DFE200EFD44A /* SirenSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF56B92BB0DFE200EFD44A /* SirenSoundPlayer.swift */; };
 		A5D3C67B2BD703B5002FBCFA /* FramePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3C67A2BD703B5002FBCFA /* FramePickerViewController.swift */; };
 		A5D3C67D2BD81CF7002FBCFA /* FramePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3C67C2BD81CF7002FBCFA /* FramePickerView.swift */; };
@@ -118,6 +119,7 @@
 		A57D722D2BE249F70035B0F7 /* CreatedSirensDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedSirensDataProvider.swift; sourceTree = "<group>"; };
 		A57D722F2BE24D090035B0F7 /* PreviewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLabel.swift; sourceTree = "<group>"; };
 		A57D72312BE288040035B0F7 /* RoundedButton+makeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoundedButton+makeButton.swift"; sourceTree = "<group>"; };
+		A57D72342BE296F30035B0F7 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		A5BF56B92BB0DFE200EFD44A /* SirenSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirenSoundPlayer.swift; sourceTree = "<group>"; };
 		A5D3C67A2BD703B5002FBCFA /* FramePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramePickerViewController.swift; sourceTree = "<group>"; };
 		A5D3C67C2BD81CF7002FBCFA /* FramePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramePickerView.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				A5DDE06B2B948AA60042DA4B /* UIView+Constraints.swift */,
 				A5DDE06C2B948AA60042DA4B /* UIView+cornerRadius.swift */,
 				A5562E622B9CB7BF00574446 /* UIViewController+children.swift */,
+				A57D72342BE296F30035B0F7 /* UIFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				A5DDE0702B948AA60042DA4B /* NSLayoutConstraintExtension.swift in Sources */,
 				A57D71F02BE175180035B0F7 /* SirensData.xcdatamodeld in Sources */,
 				A57D72262BE2401A0035B0F7 /* SirenModel+EntityModelMap.swift in Sources */,
+				A57D72352BE296F30035B0F7 /* UIFont.swift in Sources */,
 				A53E90832BC334D6008CF1A8 /* HashFindable.swift in Sources */,
 				A57D72222BE193060035B0F7 /* SirenFrame+CoreDataProperties.swift in Sources */,
 				A5DDE0722B948AA60042DA4B /* UIView+cornerRadius.swift in Sources */,

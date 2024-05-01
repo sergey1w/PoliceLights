@@ -20,4 +20,13 @@ extension NSAttributedString {
         let attrStr = NSAttributedString(string: str, attributes: attributes)
         return attrStr
     }
+    
+    static func attributedString(_ str: String, font: UIFont, color: UIColor) -> NSAttributedString {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font : font,
+            .foregroundColor: color
+        ]
+        let attrStr = NSAttributedString(string: str, attributes: attributes)
+        return attrStr
+    }
 }

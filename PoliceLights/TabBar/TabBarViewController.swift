@@ -63,7 +63,7 @@ private extension TabBarViewController {
     }
     
     func setupCreatedSirensButton() {
-        let str = NSAttributedString.attributedString("Created", fontSize: 17, lineHeight: 20)
+        let str = NSAttributedString.attributedString("Created", font: .subtitle1, color: .white)
         createdSirensButton.setAttributedTitle(str, for: .normal)
         createdSirensButton.addTarget(self, action: #selector(openCreatedSirens), for: .touchUpInside)
     }

@@ -16,8 +16,7 @@ final class RoundedButton: GradientButton {
     
     override func setTitle(_ title: String?, for state: UIControl.State) {
         guard let title = title else { return }
-        let attributedTitle = /*attributedString(title)*/
-        NSAttributedString.attributedString(
+        let attributedTitle = NSAttributedString.attributedString(
             title,
             fontSize: Constants.fontSize,
             lineHeight: Constants.lineHeight
