@@ -45,3 +45,16 @@ extension ReadySiren: Decodable {
         throw DecodingError.dataCorruptedError(in: container, debugDescription: "Could not decode ReadySiren")
     }
 }
+
+// MARK: Для сирен особых кесов json выглядит так
+
+/*
+ {
+     "title": "police solid",
+     "sirens": ["policeSolid1","policeSolid2","policeSolid3"]
+ },
+ {
+     "title": "fire truck",
+     "sirens": ["firetruck1", "firetruck2"]
+ },
+ */

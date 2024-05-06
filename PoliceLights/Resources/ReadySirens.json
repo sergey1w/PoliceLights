@@ -1,214 +1,330 @@
 [
-  {
-    "title": "police solid",
-    "sirens": ["policeSolid1","policeSolid2","policeSolid3"]
-  },
-  {
-    "title": "police dot",
-    "sirens": [
-        {
-          "frames": [
+    {
+        "title": "police dot",
+        "sirens": [
             {
-              "sirenOne": "lightBlue",
-              "sirenTwo": "pink",
-              "sirenThree": "green",
-              "sirenFour": "green"
+                "frames": [
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                    },
+                    {
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    }
+                ],
+                "frequency": 3
+            },
+            
+            {
+                "frames": [
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                    },
+                    {},
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                    },
+                    {
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    },
+                    {},
+                    {
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    }
+                ],
+                "frequency": 6
+            },
+            
+            {
+                "frames": [
+                    {
+                        "sirenOne": "blue",
+                        "sirenFour": "red"
+                    },
+                    {
+                        "sirenTwo": "blue",
+                        "sirenThree": "red",
+                    },
+                    {},
+                    {
+                        "sirenTwo": "blue",
+                        "sirenThree": "red",
+                    },
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                    },
+                    {},
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                    },
+                    {
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    },
+                    {},
+                    {
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    }
+                ],
+                "frequency": 6
+            }
+        ]
+    },
+    {
+        "title": "police dot solid",
+        "sirens": [
+            {
+                "frames": [
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                        "sirenThree": "blue",
+                        "sirenFour": "blue"
+                    },
+                    {},
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                        "sirenThree": "blue",
+                        "sirenFour": "blue"
+                    },
+                    {
+                        "sirenOne": "red",
+                        "sirenTwo": "red",
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    },
+                    {},
+                    {
+                        "sirenOne": "red",
+                        "sirenTwo": "red",
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    }
+                ],
+                "frequency": 6
             },
             {
-              "sirenOne": "green",
-              "sirenTwo": "violet",
-              "sirenThree": "pink",
-              "sirenFour": "blue"
+                "frames": [
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                        "sirenThree": "blue",
+                        "sirenFour": "blue"
+                    },
+                    {},
+                    {
+                        "sirenOne": "red",
+                        "sirenTwo": "red",
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    },
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                        "sirenThree": "blue",
+                        "sirenFour": "blue"
+                    },
+                    {},
+                    {
+                        "sirenOne": "red",
+                        "sirenTwo": "red",
+                        "sirenThree": "red",
+                        "sirenFour": "red"
+                    }
+                ],
+                "frequency": 6
             }
-          ],
-          "frequency": 20
-        }
-      ]
-  },
-  {
-    "title": "police dot solid",
-    "sirens": [
-        {
-          "frames": [
+        ]
+    },
+    {
+        "title": "ambulance",
+        "sirens": [
             {
-              "sirenOne": "lightBlue",
-              "sirenTwo": "green",
-              "sirenThree": "orange",
-              "sirenFour": "violet"
+                "frames": [
+                    {
+                        "sirenOne": "red",
+                        "sirenFour": "red"
+                    },
+                    {
+                        "sirenTwo": "red",
+                        "sirenThree": "red"
+                    }
+                ],
+                "frequency": 3
             },
             {
-              "sirenOne": "violet",
-              "sirenTwo": "orange",
-              "sirenThree": "gray",
-              "sirenFour": "lightBlue"
-            }
-          ],
-          "frequency": 20
-        },
-        {
-          "frames": [
+                "frames": [
+                    {
+                        "sirenOne": "red",
+                        "sirenTwo": "red",
+                    },
+                    {},
+                    {
+                        "sirenOne": "red",
+                        "sirenTwo": "red",
+                    },
+                    {
+                        "sirenThree": "red",
+                        "sirenFour": "red",
+                    },
+                    {},
+                    {
+                        "sirenThree": "red",
+                        "sirenFour": "red",
+                    }
+                ],
+                "frequency": 6
+            },
+        ]
+    },
+    {
+        "title": "blue pure dot",
+        "sirens": [
             {
-              "sirenOne": "violet",
-              "sirenTwo": "pink",
-              "sirenThree": "violet",
-              "sirenFour": "gray"
-            }
-          ],
-          "frequency": 1
-        },
-        {
-          "frames": [
-            {
-              "sirenOne": "pink",
-              "sirenTwo": "green",
-              "sirenThree": "gray",
-              "sirenFour": "green"
+                "frames": [
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                        "sirenThree": "blue",
+                        "sirenFour": "blue"
+                    },
+                    {}
+                ],
+                "frequency": 6
             },
             {
-              "sirenOne": "violet",
-              "sirenTwo": "red",
-              "sirenThree": "green",
-              "sirenFour": "violet"
-            }
-          ],
-          "frequency": 1
-        }
-      ]
-  },
-  {
-    "title": "ambulance",
-    "sirens": [
-        {
-          "frames": [
-            {
-              "sirenOne": "red",
-              "sirenTwo": "green",
-              "sirenThree": "blue",
-              "sirenFour": "violet"
-            }
-          ],
-          "frequency": 20
-        }
-      ]
-  },
-  {
-    "title": "fire truck",
-    "sirens": ["firetruck1", "firetruck2"]
-  },
-  {
-    "title": "blue pure dot",
-    "sirens": [
-        {
-          "frames": [
-            {
-              "sirenOne": "green",
-              "sirenTwo": "pink",
-              "sirenThree": "violet",
-              "sirenFour": "pink"
+                "frames": [
+                    {
+                        "sirenOne": "blue",
+                        "sirenTwo": "blue",
+                    },
+                    {
+                        "sirenThree": "blue",
+                        "sirenFour": "blue",
+
+                    }
+                ],
+                "frequency": 6
             },
             {
-              "sirenOne": "lightBlue",
-              "sirenTwo": "lightBlue",
-              "sirenThree": "orange",
-              "sirenFour": "green"
+                "frames": [
+                    {"sirenOne": "blue"},{"sirenTwo": "blue"},{"sirenThree": "blue"},{"sirenFour": "blue"},
+                    {"sirenFour": "blue"},{"sirenThree": "blue"},{"sirenTwo": "blue"},{"sirenOne": "blue"}
+                ],
+                "frequency": 6
             }
-          ],
-          "frequency": 6
-        }
-      ]
-  },
-  {
-    "title": "orange",
-    "sirens": [
-        {
-          "frames": [
+        ]
+    },
+    {
+        "title": "orange",
+        "sirens": [
             {
-              "sirenOne": "blue",
-              "sirenTwo": "red",
-              "sirenThree": "blue",
-              "sirenFour": "lightBlue"
-            }
-          ],
-          "frequency": 3
-        },
-        {
-          "frames": [
-            {
-              "sirenOne": "orange",
-              "sirenTwo": "gray",
-              "sirenThree": "green",
-              "sirenFour": "violet"
+                "frames": [
+                    {
+                        "sirenOne": "orange",
+                        "sirenTwo": "orange",
+                    },
+                    {},
+                    {
+                        "sirenOne": "orange",
+                        "sirenTwo": "orange",
+                    },
+                    {
+                        "sirenThree": "orange",
+                        "sirenFour": "orange",
+                    },
+                    {},
+                    {
+                        "sirenThree": "orange",
+                        "sirenFour": "orange",
+                    }
+                ],
+                "frequency": 12
             },
             {
-              "sirenOne": "gray",
-              "sirenTwo": "blue",
-              "sirenThree": "violet",
-              "sirenFour": "red"
+                "frames": [
+                    {
+                        "sirenOne": "orange",
+                        "sirenFour": "orange"
+                    },
+                    {
+                        "sirenTwo": "orange",
+                        "sirenThree": "orange",
+                    },
+                    {
+                        "sirenTwo": "orange",
+                        "sirenThree": "orange",
+                    },
+                    {
+                        "sirenOne": "orange",
+                        "sirenTwo": "orange",
+                    },
+                    {},
+                    {
+                        "sirenOne": "orange",
+                        "sirenTwo": "orange",
+                    },
+                    {
+                        "sirenThree": "orange",
+                        "sirenFour": "orange"
+                    },
+                    {},
+                    {
+                        "sirenThree": "orange",
+                        "sirenFour": "orange"
+                    },
+                    {
+                        "sirenOne": "orange",
+                        "sirenFour": "orange"
+                    }
+                ],
+                "frequency": 6
             }
-          ],
-          "frequency": 6
-        },
-        {
-          "frames": [
+        ]
+    },
+    {
+        "title": "music",
+        "sirens": [
             {
-              "sirenOne": "gray",
-              "sirenTwo": "red",
-              "sirenThree": "orange",
-              "sirenFour": "orange"
-            }
-          ],
-          "frequency": 3
-        }
-      ]
-  },
-  {
-    "title": "music",
-    "sirens": [
-        {
-          "frames": [
-            {
-              "sirenOne": "lightBlue",
-              "sirenTwo": "red",
-              "sirenThree": "pink",
-              "sirenFour": "green"
+                "frames": [
+                    {
+                        "sirenOne": "gray",
+                        "sirenTwo": "gray",
+                        "sirenThree": "gray",
+                        "sirenFour": "gray"
+                    },
+                    {}
+                ],
+                "frequency": 20
             },
             {
-              "sirenOne": "lightBlue",
-              "sirenTwo": "violet",
-              "sirenThree": "gray",
-              "sirenFour": "pink"
+                "frames": [
+                    {
+                        "sirenOne": "gray",
+                        "sirenTwo": "gray",
+                        "sirenThree": "gray",
+                        "sirenFour": "gray"
+                    },
+                    {},
+                    {
+                        "sirenOne": "gray",
+                        "sirenTwo": "gray",
+                        "sirenThree": "gray",
+                        "sirenFour": "gray"
+                    },
+                    {"sirenOne": "green"},{"sirenTwo": "blue"},{"sirenThree": "lightBlue"},{"sirenFour": "pink"}
+                ],
+                "frequency": 6
             }
-          ],
-          "frequency": 20
-        },
-        {
-          "frames": [
-            {
-              "sirenOne": "orange",
-              "sirenTwo": "red",
-              "sirenThree": "pink",
-              "sirenFour": "lightBlue"
-            },
-            {
-              "sirenOne": "orange",
-              "sirenTwo": "lightBlue",
-              "sirenThree": "violet",
-              "sirenFour": "orange"
-            }
-          ],
-          "frequency": 6
-        },
-        {
-          "frames": [
-            {
-              "sirenOne": "blue",
-              "sirenTwo": "lightBlue",
-              "sirenThree": "lightBlue",
-              "sirenFour": "pink"
-            }
-          ],
-          "frequency": 20
-        }
-      ]
-  }
+        ]
+    }
 ]

@@ -23,10 +23,10 @@ extension SirenModel: EntityModelMapProtocol {
             SirenFrameModel.mapFromEntity($0)
         }
         return SirenModel(
+            name: entity.name,
             frames: frames ?? [],
             frequency: Int(entity.frequency),
-            sound: SirenSound(rawValue: entity.sound ?? ""),
-            name: entity.name
+            sound: SirenSound(rawValue: entity.sound ?? "")
         )
     }
     
